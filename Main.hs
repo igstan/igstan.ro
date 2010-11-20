@@ -11,7 +11,7 @@ import Text.Hakyll.CreateContext (createPage, createListing)
 
 main :: IO ()
 main = hakyll "http://igstan.ro" $ do
-    -- Static directory.
+    static "favicon.ico"
     directory static "css"
 
     -- Find all post paths.
