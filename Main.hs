@@ -13,6 +13,7 @@ main :: IO ()
 main = hakyll "http://igstan.ro" $ do
     static "favicon.ico"
     directory static "css"
+    directory static "files"
 
     -- Find all post paths.
     postPaths <- liftM (reverse . sort) $ getRecursiveContents "posts"
