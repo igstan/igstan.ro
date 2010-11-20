@@ -1,0 +1,9 @@
+*.o
+*.hi
+*.tmproj
+*.tix
+.hpc
+_site
+_cache
+dist
+hakyll
