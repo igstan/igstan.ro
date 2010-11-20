@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Git uses its own PATH variable, so I have to prepend it with Cabal's bin path
-PATH="$HOME/.cabal/bin:$PATH"
-
 git checkout -f &&
-cabal clean &&
-cabal configure &&
-cabal build &&
-rm hakyll.tix &&
-./dist/build/hakyll/hakyll build
+ghc --make -fforce-recomp -o hakyll Main &&
+./hakyll build
