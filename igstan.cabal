@@ -1,0 +1,28 @@
+name:           igstan
+version:        0.1.0
+build-type:     Simple
+cabal-version:  >= 1.6
+
+Flag debug
+  Default: False
+
+Flag testsuite
+  Default: False
+
+Executable hakyll
+  hs-source-dirs: ./
+  main-is:        Main.hs
+
+  if flag(debug)
+    cpp-options: -DDEBUG
+
+  if flag(testsuite)
+    cpp-options: -DDEBUG_TEST
+
+  build-depends:
+    base >= 4 && < 5,
+    hakyll >= 2.3.0 && < 3,
+    monads-tf
+
+  ghc-options: -O2 -Wall -fhpc -fwarn-tabs -funbox-strict-fields -threaded
+               -fno-warn-unused-do-bind -fno-warn-name-shadowing
