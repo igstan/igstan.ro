@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Git post-receive hook that I use to deploy the website on my VPS.
 
 git checkout -f &&
 ghc --make -fforce-recomp -o hakyll Main &&
