@@ -2,6 +2,11 @@
 #
 # Git post-receive hook that I use to deploy the website on my VPS.
 
+if [ $GIT_DIR ]; then
+    unset GIT_DIR
+    cd ..
+fi
+
 git checkout -f &&
 ghc --make -fforce-recomp -o hakyll Main &&
 ./hakyll build
