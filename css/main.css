@@ -99,39 +99,39 @@ pre code {
   margin: 50px 0 70px 200px;
 }
 
-.home-section {
+section {
   margin: 0 0 40px 0;
 }
 
-.home-section h1 {
+section h1 {
   width: inherit;
   padding-bottom: 5px;
   border-bottom: dotted #333 1px;
 }
 
-.home-section ul, .home-section ol {
+section ul, section ol {
   list-style: none outside;
   margin: 0;
   padding: 0;
 }
 
-.home-section li {
+section li {
   margin: 5px 0;
 }
 
-.online-presence li {
+.social li {
   padding-left: 22px;
 }
 
-.online-presence .github {
+.github {
   background: transparent url(graphics/github.png) no-repeat 0 50%;
 }
 
-.online-presence .twitter {
+.twitter {
   background: transparent url(graphics/twitter.png) no-repeat 0 50%;
 }
 
-.online-presence .stackoverflow {
+.stackoverflow {
   background: transparent url(graphics/stackoverflow.png) no-repeat 0 50%;
 }
 
