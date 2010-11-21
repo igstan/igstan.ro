@@ -125,6 +125,18 @@ section li {
   margin: 5px 0;
 }
 
+.posts {
+  position: relative;
+}
+
+.posts .all-posts {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .social li {
   padding-left: 22px;
 }
