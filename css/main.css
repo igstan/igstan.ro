@@ -95,6 +95,9 @@ pre code {
   top: 35px;
   left: 55px;
 }
+.logo:hover {
+  background: transparent;
+}
 
 .container {
   width: 600px;
