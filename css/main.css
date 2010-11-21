@@ -21,6 +21,9 @@ a:hover {
   outline: none;
   background-color: #2060A0;
   text-decoration: none;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
 }
 
 a:focus {
