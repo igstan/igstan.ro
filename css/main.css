@@ -81,6 +81,7 @@ pre code {
   background: transparent;
   width: 700px;
   display: block;
+  margin: 20px 0 30px 0;
   padding: 0 0 0 10px;
   overflow: auto;
   border-left: dotted #999 1px;
@@ -186,7 +187,6 @@ table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode
    { margin: 0; padding: 0; border: 0; vertical-align: baseline; border: none; }
 td.lineNumbers { text-align: right; background-color: #EBEBEB; color: black; padding-right: 5px; padding-left: 5px; }
 
-pre.sourceCode { }
 pre.sourceCode span.kw { font-weight: bold; }
 pre.sourceCode span.dt { color: #800000; }
 pre.sourceCode span.dv { color: #0000FF; }
