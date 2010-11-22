@@ -10,7 +10,7 @@ In my latest project at work I had to obtain, by means of an
 values of certain data fields in our database. And when I say transliteration I
 don't mean to transform characters from all over the world into latin characters.
 What I wanted was to strip [diacritics][2] out of latin based characters, like:
-ş, ţ, ă, î or â.
+ș, ț, ă, î or â.
 
 Initially I thought this should be an easy job as database, table and column
 charset values were all set to `utf8_general_ci` and I knew MySQL does well at
@@ -20,7 +20,7 @@ a transliterated value, i.e. from the right hand side string to obtain the left
 hand side string.
 
 ~~~ {.sql}
-SELECT 'staia' = 'şţăîâ';
+SELECT 'staia' = 'șțăîâ';
 ~~~
 
 So what I did was to define a function in which to take advantage of the comparison
