@@ -161,6 +161,8 @@ section li {
 }
 
 .publish-date {
+  display: block;
+  padding: 0 0 10px 0;
   color: #808080;
   font-size: 70%;
 }
