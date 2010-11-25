@@ -188,6 +188,10 @@ section li {
   font-size: 70%;
 }
 
+#disqus_thread {
+  margin-top: 60px;
+}
+
 /* code highlighting -------------------------------------------------------- */
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
    { margin: 0; padding: 0; border: 0; vertical-align: baseline; border: none; }
