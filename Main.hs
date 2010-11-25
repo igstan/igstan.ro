@@ -26,7 +26,7 @@ main = hakyll "http://igstan.ro" $ do
 
     -- Render all posts list.
     let posts = createListing "posts.html" ["templates/postitem.html"]
-                              postPages [("title", Left "All posts")]
+                              postPages [("title", Left "All Posts")]
     renderChain ["posts.html", "templates/layout.html"] posts
 
     -- Render all posts.
