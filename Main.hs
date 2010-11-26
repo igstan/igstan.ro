@@ -27,7 +27,7 @@ main = hakyll "http://igstan.ro" $ do
                               (take 10 postPages) [("title", Left "igstan.ro")]
     renderChain ["index.html", "templates/layout.html"] index
 
-    let feedItems = map (>>> copyValue "body" "description") (take 10 postPages)
+    let feedItems = map (>>> copyValue "body" "description") (take 20 postPages)
 
     renderRss rssFeed feedItems
 
