@@ -1,12 +1,15 @@
 module Main where
 
-import Data.List (sort)
+import Control.Arrow ((>>>))
 import Control.Monad (forM_, liftM)
+import Data.List (sort)
 
 import Text.Hakyll (hakyll)
 import Text.Hakyll.Render (static, renderChain)
+import Text.Hakyll.Feed (renderRss, FeedConfiguration(..))
 import Text.Hakyll.File (directory, getRecursiveContents)
 import Text.Hakyll.CreateContext (createPage, createListing)
+import Text.Hakyll.ContextManipulations (copyValue)
 
 
 main :: IO ()
@@ -24,6 +27,10 @@ main = hakyll "http://igstan.ro" $ do
                               (take 10 postPages) [("title", Left "igstan.ro")]
     renderChain ["index.html", "templates/layout.html"] index
 
+    let feedItems = map (>>> copyValue "body" "description") (take 10 postPages)
+
+    renderRss rssFeed feedItems
+
     -- Render all posts list.
     let posts = createListing "posts.html" ["templates/postitem.html"]
                               postPages [("title", Left "All Posts")]
@@ -33,3 +40,10 @@ main = hakyll "http://igstan.ro" $ do
     forM_ postPages $ renderChain [ "templates/post.html"
                                   , "templates/layout.html"
                                   ]
+
+rssFeed = FeedConfiguration
+    { feedUrl         = "rss.xml"
+    , feedTitle       = "igstan.ro"
+    , feedDescription = "RSS feed for igstan.ro blog"
+    , feedAuthorName  = "Ionuț G. Stan"
+    }
