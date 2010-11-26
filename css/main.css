@@ -30,10 +30,23 @@ a:hover {
 }
 
 a:focus {
-  outline: solid #2060A0 3px;
+  /* !important to override disqus global styles for link outline */
+  outline: solid #2060A0 3px !important;
   outline-offset: 3px;
   outline-radius: 5px;
   -moz-outline-radius: 5px;
+}
+
+/* fix disqus styles for my theme */
+#dsq-content a:link, #dsq-content a:visited {
+  color: inherit;
+  overflow: hidden;
+}
+#dsq-content a:focus {
+  outline: none;
+}
+#dsq-content .dsq-global-toolbar-likes {
+  overflow: visible !important;
 }
 
 footer, section {
