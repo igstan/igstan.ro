@@ -144,6 +144,11 @@ section li {
   font-weight: normal;
 }
 
+.feed {
+  padding-right: 20px;
+  background: transparent url(graphics/feed.png) no-repeat 98% 50%;
+}
+
 .social li {
   padding-left: 22px;
 }
