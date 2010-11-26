@@ -16,14 +16,17 @@ a[href$=".pdf"] {
   background-position: right 50%;
 }
 
+a, .posts .all-posts {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
 a:hover {
   color: white;
   outline: none;
   background-color: #2060A0;
   text-decoration: none;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
 }
 
 a:focus {
@@ -132,16 +135,13 @@ section li {
   margin: 5px 0;
 }
 
-.posts {
-  position: relative;
-}
-
 .posts .all-posts {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  margin: 0;
-  padding: 0;
+  margin: 10px 0;
+  padding: 5px;
+  text-align: right;
+  background: #f0f0f0;
+  font-size: 90%;
+  font-weight: normal;
 }
 
 .social li {
