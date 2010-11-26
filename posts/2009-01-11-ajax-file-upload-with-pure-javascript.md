@@ -19,6 +19,9 @@ offers full access to this new programming interface. So we'll embrace the chall
 and write a little JavaScript uploader on top of this new
 <abbr title="Application Programming Interface">API</abbr>.
 
+However, if you're not into reading this long article, just go ahead and look at
+the complete source code in my [GitHub repo][10].
+
 
 Goal
 ----
@@ -792,3 +795,4 @@ their responsiveness further increased.
 [7]: http://www.faqs.org/rfcs/rfc822.html
 [8]: https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters
 [9]: http://www.w3.org/TR/file-upload/
+[10]: https://github.com/igstan/ajax-file-upload
