@@ -121,7 +121,9 @@ pre code {
 .container {
   width: 660px;
   text-align: justify;
+  padding-right: 5px;
   margin: 50px 0 70px 200px;
+  background: white;
 }
 
 section {
