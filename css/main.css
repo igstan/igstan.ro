@@ -119,7 +119,7 @@ pre code {
 }
 
 .container {
-  width: 600px;
+  width: 660px;
   text-align: justify;
   margin: 50px 0 70px 200px;
 }
@@ -189,7 +189,7 @@ section li {
   left: 0;
   padding-left: 45px;
   background: #eee;
-  width: 770px;
+  width: 825px;
   height: 25px;
   line-height: 25px;
   box-shadow: 2px -2px 7px rgba(0, 0, 0, 0.5);
