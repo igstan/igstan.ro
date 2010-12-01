@@ -59,10 +59,6 @@ body {
   background: white url(graphics/main-bg.png) no-repeat 105% 105% fixed;
 }
 
-p {
-  font-family: Museo, Palatino, Georgia, Serif;
-}
-
 h1, h2, h3 {
   margin: 0;
   padding: 0;
