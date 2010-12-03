@@ -16,7 +16,7 @@ a[href$=".pdf"] {
   background-position: right 50%;
 }
 
-a, .posts .all-posts {
+a, .related {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -146,7 +146,7 @@ section li {
   margin: 5px 0;
 }
 
-.posts .all-posts {
+.related {
   margin: 10px 0;
   padding: 5px;
   text-align: right;
