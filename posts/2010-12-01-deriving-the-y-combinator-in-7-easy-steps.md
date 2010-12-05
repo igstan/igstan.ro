@@ -5,7 +5,7 @@ date: December 01, 2010
 ------------------------------------------------
 
 
-The Y Combinator is a method of implementing recursion in a programming
+The [Y Combinator][1] is a method of implementing recursion in a programming
 language that does not support it natively (actually, it's used more for
 exercising programming brains). The requirement, though, is that language to
 support anonymous functions.
@@ -204,3 +204,6 @@ var fact = Y(function (g) {
 The End
 -------
 I hope you enjoyed it!
+
+
+[1]: http://en.wikipedia.org/wiki/Fixed_point_combinator
