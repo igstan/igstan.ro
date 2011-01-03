@@ -86,7 +86,6 @@ img, iframe {
 }
 
 code {
-  font-size: 90%;
   font-family: Consolas, Monospace;
   background: #F4F4F4;
 }
@@ -103,6 +102,11 @@ pre code {
   padding: 0 0 0 10px;
   overflow: auto;
   border-left: dotted #999 1px;
+  font-size: 105%;
+  /* This will slightly increase the size of lowercase letters on Gecko. Chrome
+     and Safari seem to display a larger font even if they don't recognize this
+     CSS property. */
+  font-size-adjust: 0.58;
 }
 
 .gdoc {
