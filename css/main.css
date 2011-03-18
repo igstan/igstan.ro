@@ -175,6 +175,10 @@ section li {
   background: transparent url(graphics/stackoverflow.png) no-repeat 0 50%;
 }
 
+.talks {
+  display: block;
+}
+
 .publish-date {
   display: block;
   padding: 0 0 10px 0;
