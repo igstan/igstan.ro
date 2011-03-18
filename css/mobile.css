@@ -56,15 +56,24 @@ a:link, a:visited {
   background-repeat: no-repeat;
   background-position: 3px 50%;
 }
+
 .github {
   background-image: url(graphics/github.png);
 }
+
 .twitter {
   background-image: url(graphics/twitter.png);
 }
+
 .stackoverflow {
   background-image: url(graphics/stackoverflow.png);
 }
+
+.feed {
+  padding-right: 20px;
+  background: transparent url(graphics/feed.png) no-repeat 98% 50%;
+}
+
 
 /* code highlighting -------------------------------------------------------- */
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
