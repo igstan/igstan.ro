@@ -1,0 +1,88 @@
+section, footer {
+  display: block;
+}
+
+body {
+  background: white;
+  font-size: 105%;
+  font-family: Arial, Verdana, Sans-Serif;
+}
+.logo {
+  margin: 10px;
+}
+.posts ol {
+  list-style: none outside;
+  padding: 0;
+  margin: 0;
+}
+.posts li, .social li {
+  padding: 4px;
+  margin-bottom: 7px;
+  border: solid #e0e0e0 1px;
+  background-color: #efefef;
+  border-radius: 3px;
+}
+h1 {
+  font-weight: normal;
+  margin: 5px 0;
+}
+.date {
+  margin-top: 3px;
+  color: #777;
+  font-size: 90%;
+  display: block;
+}
+a:link, a:visited {
+  color: #2060A0;
+}
+.social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none outside;
+}
+.copyright {
+  color: #eee;
+  padding: 4px;
+  margin: 14px 0 7px 0;
+  background: #444;
+  border-radius: 3px;
+}
+.talks {
+  display: none;
+}
+
+.social li {
+  padding-left: 23px;
+  background-repeat: no-repeat;
+  background-position: 3px 50%;
+}
+.github {
+  background-image: url(graphics/github.png);
+}
+.twitter {
+  background-image: url(graphics/twitter.png);
+}
+.stackoverflow {
+  background-image: url(graphics/stackoverflow.png);
+}
+
+/* code highlighting -------------------------------------------------------- */
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
+   { margin: 0; padding: 0; border: 0; vertical-align: baseline; border: none; }
+td.lineNumbers { text-align: right; background-color: #EBEBEB; color: black; padding-right: 5px; padding-left: 5px; }
+
+pre.sourceCode span.kw { font-weight: bold; }
+pre.sourceCode span.dt { color: #800000; }
+pre.sourceCode span.dv { color: #0000FF; }
+pre.sourceCode span.bn { color: #0000FF; }
+pre.sourceCode span.fl { color: #800080; }
+pre.sourceCode span.ch { color: #FF00FF; }
+pre.sourceCode span.st { color: #DD0000; }
+pre.sourceCode span.co { color: #808080; }
+pre.sourceCode span.ot { }
+pre.sourceCode span.al { color: green; font-weight: bold; }
+pre.sourceCode span.fu { color: #000080; }
+pre.sourceCode span.re { }
+pre.sourceCode span.er { color: red; font-weight: bold; }
+
+pre.sourceCode.php .kw { color: #0000FF; font-weight: normal; }
