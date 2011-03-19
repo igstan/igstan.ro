@@ -7,9 +7,6 @@ body {
   font-size: 105%;
   font-family: Arial, Verdana, Sans-Serif;
 }
-.logo {
-  margin: 10px;
-}
 .posts ol {
   list-style: none outside;
   padding: 0;
