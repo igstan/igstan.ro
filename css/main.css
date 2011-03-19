@@ -9,13 +9,6 @@ a:link, a:visited {
   color: #2060A0;
 }
 
-a[href$=".pdf"] {
-  padding-right: 21px;
-  background-image: url(graphics/pdf.png);
-  background-repeat: no-repeat;
-  background-position: right 50%;
-}
-
 a, .related {
   border-radius: 2px;
   -moz-border-radius: 2px;
