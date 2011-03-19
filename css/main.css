@@ -154,22 +154,6 @@ section li {
   font-weight: normal;
 }
 
-.social li {
-  padding-left: 22px;
-}
-
-.github {
-  background: transparent url(graphics/github.png) no-repeat 0 50%;
-}
-
-.twitter {
-  background: transparent url(graphics/twitter.png) no-repeat 0 50%;
-}
-
-.stackoverflow {
-  background: transparent url(graphics/stackoverflow.png) no-repeat 0 50%;
-}
-
 .talks {
   display: block;
 }
