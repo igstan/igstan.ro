@@ -1,5 +1,26 @@
 @charset "UTF-8";
 
+.posts li, .social li {
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+.social li {
+  padding-left: 22px;
+  background-position: 0px 50%;
+}
+.date {
+  display: inline;
+  margin-top: 0;
+  color: inherit;
+  font-size: inherit;
+}
+.date:before {
+  content: " - ";
+}
+
 @font-face {
   font-family: Museo;
   src: url(./fonts/Museo300-Regular.otf);
@@ -156,7 +177,8 @@ section li {
   display: block;
   bottom: 0;
   left: 0;
-  padding-left: 45px;
+  padding: 0 0 0 45px;
+  margin: 0;
   background: #eee;
   width: 825px;
   height: 25px;
