@@ -38,10 +38,6 @@ a:focus {
   overflow: visible !important;
 }
 
-footer, section {
-  display: block;
-}
-
 body {
   font-size: 100%;
   font-family: Museo, Palatino, Georgia, Serif;
