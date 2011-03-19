@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.posts li, .social li {
+.posts li, .social li, .all-posts li {
   padding: 0;
   margin-bottom: 0;
   border: none;
@@ -11,13 +11,15 @@
   padding-left: 22px;
   background-position: 0px 50%;
 }
-.date {
+.posts .publish-date,
+.all-posts .publish-date {
   display: inline;
   margin-top: 0;
   color: inherit;
   font-size: inherit;
 }
-.date:before {
+.posts .publish-date:before,
+.all-posts .publish-date:before {
   content: " - ";
 }
 
@@ -164,7 +166,7 @@ section li {
   display: block;
 }
 
-.publish-date {
+article .publish-date {
   display: block;
   padding: 0 0 10px 0;
   color: #808080;

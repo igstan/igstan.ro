@@ -7,12 +7,12 @@ body {
   font-size: 105%;
   font-family: Arial, Verdana, Sans-Serif;
 }
-.posts ol {
+.posts ol, .all-posts ol {
   list-style: none outside;
   padding: 0;
   margin: 0;
 }
-.posts li, .social li {
+.posts li, .social li, .all-posts li {
   padding: 4px;
   margin-bottom: 7px;
   border: solid #e0e0e0 1px;
@@ -23,7 +23,7 @@ h1 {
   font-weight: normal;
   margin: 5px 0;
 }
-.date {
+.publish-date {
   margin-top: 3px;
   color: #777;
   font-size: 90%;
