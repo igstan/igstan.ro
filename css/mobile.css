@@ -24,7 +24,7 @@ h1 {
   font-weight: normal;
   margin: 5px 0;
 }
-.publish-date {
+time[pubdate] {
   margin-top: 3px;
   color: #777;
   font-size: 90%;

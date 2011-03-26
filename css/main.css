@@ -11,15 +11,15 @@
   padding-left: 22px;
   background-position: 0px 50%;
 }
-.posts .publish-date,
-.all-posts .publish-date {
+.posts time[pubdate],
+.all-posts time[pubdate] {
   display: inline;
   margin-top: 0;
   color: inherit;
   font-size: inherit;
 }
-.posts .publish-date:before,
-.all-posts .publish-date:before {
+.posts time[pubdate]:before,
+.all-posts time[pubdate]:before {
   content: " - ";
 }
 
@@ -166,7 +166,7 @@ section li {
   display: block;
 }
 
-article .publish-date {
+article time[pubdate] {
   display: block;
   padding: 0 0 10px 0;
   color: #808080;
