@@ -1,5 +1,6 @@
-footer, section {
-  display: block;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display:block;
 }
 
 body {
