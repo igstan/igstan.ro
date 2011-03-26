@@ -6,7 +6,12 @@
 <meta name="viewport" content="width=device-width">
 <title>$title</title>
 <link rel="stylesheet" type="text/css" href="/css/mobile.css">
-<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen and (min-width: 480px)">
+<!--[if !IEMobile & lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+<![endif]-->
+<!--[if IE]><![if gte IE 9]><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen and (min-width: 480px)">
+<!--[if IE]><![endif]><![endif]-->
 <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
