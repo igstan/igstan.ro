@@ -94,7 +94,17 @@ img, iframe {
 }
 
 code {
-  font-family: Consolas, Menlo, Monaco, Monospace;
+/*
+  To achive decent font sizes on all browsers, I had to use 80% which works best
+  for preferred font families, and adjust the size in Firefox which does not
+  uses the page font size as a reference for the 100% value inherited from the
+  body, but instead uses the font size set in the preferences for monospace
+  fonts. The default is 13px, and 80% out of 13px is way too small. Using
+  font-size-adjust, which is only understood by Firefox fixes this.
+*/
+  font-size: 80%;
+  font-size-adjust: 0.7;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", Monospace;
   background: #F4F4F4;
 }
 
