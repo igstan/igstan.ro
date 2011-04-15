@@ -94,7 +94,7 @@ img, iframe {
 }
 
 code {
-  font-family: Consolas, Monospace;
+  font-family: Consolas, Menlo, Monaco, Monospace;
   background: #F4F4F4;
 }
 
