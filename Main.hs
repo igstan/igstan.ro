@@ -1,48 +1,61 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Control.Arrow ((>>>))
-import Control.Monad (forM_, liftM)
-import Data.List (sort)
+import Prelude hiding (id)
+import Control.Arrow ((>>>), (***), arr)
+import Control.Category (id)
+import Data.Monoid (mempty, mconcat)
 
-import Text.Hakyll (hakyll)
-import Text.Hakyll.Render (static, renderChain)
-import Text.Hakyll.Feed (renderRss, FeedConfiguration(..))
-import Text.Hakyll.File (directory, getRecursiveContents)
-import Text.Hakyll.CreateContext (createPage, createListing)
-import Text.Hakyll.ContextManipulations (copyValue)
-
+import Hakyll
 
 main :: IO ()
-main = hakyll "http://igstan.ro" $ do
-    static "favicon.ico"
-    directory static "css"
-    directory static "files"
+main = hakyll $ do
+    copyFiles ["favicon.ico", "css/**", "files/**"]
 
-    -- Find all post paths.
-    postPaths <- liftM (reverse . sort) $ getRecursiveContents "posts"
-    let postPages = map createPage postPaths
+    match "templates/*" $ compile templateCompiler
 
-    -- Render index, including recent posts.
-    let index = createListing "index.html" ["templates/postitem.html"]
-                              (take 10 postPages) [("title", Left "igstan.ro")]
-    renderChain ["index.html", "templates/layout.html"] index
+    match "posts/*" $ do
+        route   $ setExtension ".html"
+        compile $ pageCompiler
+            >>> arr (renderDateField "date" "%B %d, %Y" "Date unknown")
+            >>> applyTemplateCompiler "templates/post.html"
+            >>> applyTemplateCompiler "templates/layout.html"
 
-    let feedItems = map (>>> copyValue "body" "description") (take 20 postPages)
+    match "posts.html" $ route idRoute
+    create "posts.html" $ constA mempty
+        >>> arr (setField "title" "All Posts")
+        >>> requireAllA "posts/*" generatePostsList
+        >>> applyTemplateCompiler "templates/posts.html"
+        >>> applyTemplateCompiler "templates/layout.html"
 
-    renderRss rssFeed feedItems
+    match "index.html" $ route idRoute
+    create "index.html" $ constA mempty
+        >>> arr (setField "title" "igstan.ro")
+        >>> requireAllA "posts/*" (id *** arr (take 10) >>> generatePostsList)
+        >>> applyTemplateCompiler "templates/index.html"
+        >>> applyTemplateCompiler "templates/layout.html"
 
-    -- Render all posts list.
-    let posts = createListing "posts.html" ["templates/postitem.html"]
-                              postPages [("title", Left "All Posts")]
-    renderChain ["posts.html", "templates/layout.html"] posts
+    match "rss.xml" $ route idRoute
+    create "rss.xml" $
+        requireAll_ "posts/*"
+            >>> arr reverse
+            >>> mapCompiler (arr $ copyBodyToField "description")
+            >>> renderRss rssFeed
 
-    -- Render all posts.
-    forM_ postPages $ renderChain [ "templates/post.html"
-                                  , "templates/layout.html"
-                                  ]
+  where
+    copyFiles = mapM_ (`match` (route idRoute >> compile copyFileCompiler))
 
+
+generatePostsList = setFieldA "posts" $
+    arr (reverse . sortByBaseName)
+        >>> require "templates/postitem.html" (\p t -> map (applyTemplate t) p)
+        >>> arr mconcat
+        >>> arr pageBody
+
+
+rssFeed :: FeedConfiguration
 rssFeed = FeedConfiguration
-    { feedUrl         = "rss.xml"
+    { feedRoot        = "http://igstan.ro"
     , feedTitle       = "igstan.ro"
     , feedDescription = "RSS feed for igstan.ro blog"
     , feedAuthorName  = "Ionuț G. Stan"
