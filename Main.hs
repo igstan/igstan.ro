@@ -31,7 +31,7 @@ main = hakyll $ do
     match "index.html" $ route idRoute
     create "index.html" $ constA mempty
         >>> arr (setField "title" "igstan.ro")
-        >>> requireAllA "posts/*" (id *** arr (take 10) >>> generatePostsList)
+        >>> requireAllA "posts/*" (id *** arr (take 10 . reverse) >>> generatePostsList)
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/layout.html"
 
