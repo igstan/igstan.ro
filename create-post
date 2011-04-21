@@ -1,0 +1,74 @@
+#!/usr/bin/env runhaskell
+
+import Control.Applicative ((<$>))
+import Control.Arrow ((>>>))
+import Data.Char (isAlphaNum, toLower, toUpper)
+import Data.List (sort)
+import Data.Time (getCurrentTime, formatTime, FormatTime)
+import System.Directory (doesDirectoryExist)
+import System.Environment (getArgs)
+import System.IO (hFlush, stdout, writeFile)
+import System.Locale (defaultTimeLocale)
+import Text.Printf (printf)
+
+main :: IO ()
+main = do name <- getPostName
+          time <- getCurrentTime
+          let template = createTemplate name time
+          let filename = createFilename name time
+          writeFile filename template
+          putStrLn $ "Created file: " ++ filename
+
+getPostName :: IO String
+getPostName = do args <- getArgs
+                 case args of
+                   []      -> readPrompt "Post name: "
+                   first:_ -> return first
+
+readPrompt :: String -> IO String
+readPrompt prompt = flushString prompt >> getLine
+
+flushString :: String -> IO ()
+flushString s = putStr s >> hFlush stdout
+
+createFilename :: FormatTime t => String -> t -> String
+createFilename name time = printf "posts/%s-%s.md" (formatYearMonthDay time) (slug name)
+
+createTemplate :: FormatTime t => String -> t -> String
+createTemplate name time = contents
+  where delimiter = take 80 $ repeat '-'
+        contents = unlines [ delimiter
+                           , printf "title: %s" (capitalizeWords name)
+                           , "author: Ionuț G. Stan"
+                           , printf "date: %s" (formatPostDate time)
+                           , delimiter
+                           ]
+
+formatPostDate :: FormatTime t => t -> String
+formatPostDate = formatTime defaultTimeLocale "%B %d, %Y"
+
+formatYearMonthDay :: FormatTime t => t -> String
+formatYearMonthDay = formatTime defaultTimeLocale "%Y-%m-%d"
+
+capitalizeWords :: String -> String
+capitalizeWords = words >>> map capitalizeWord >>> unwords
+  where capitalizeWord []     = []
+        capitalizeWord (c:cs) = toUpper c : map toLower cs
+
+slug :: String -> String
+slug = map toLower
+   >>> map addHyphens
+   >>> trimLeftHyphens
+   >>> foldr compactHyphens ""
+
+trimLeftHyphens :: String -> String
+trimLeftHyphens = dropWhile (== '-')
+
+addHyphens :: Char -> Char
+addHyphens char | isAlphaNum char = char
+                | otherwise       = '-'
+
+compactHyphens :: Char -> String -> String
+compactHyphens '-'  ""           = ""
+compactHyphens '-'  rest@('-':_) = rest
+compactHyphens char rest         = char : rest
