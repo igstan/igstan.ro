@@ -39,7 +39,7 @@ Put `coffee` inside the CFBundleTypeExtensions listing (as you can see above).
 Now rebuild the LaunchServices database:
 
 ~~~ {.bash}
-$ ln -s /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister lsregister
+$ ln -s /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister /usr/local/bin/lsregister
 $ lsregister -kill -r -domain local -domain system -domain user
 ~~~
 
