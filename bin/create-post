@@ -22,8 +22,8 @@ main = do name <- getPostName
 getPostName :: IO String
 getPostName = do args <- getArgs
                  case args of
-                   []      -> readPrompt "Post name: "
-                   first:_ -> return first
+                   [first] -> return first
+                   _       -> readPrompt "Post name: "
 
 readPrompt :: String -> IO String
 readPrompt prompt = flushString prompt >> getLine
