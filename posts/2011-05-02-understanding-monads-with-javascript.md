@@ -18,7 +18,11 @@ applying simple code transformations.
 Also, I chose JavaScript because it forces you to write some code that Haskell
 readily hides for you thanks to its terse syntax or different semantics (lambda
 expressions, operators, and built-in function currying). Lastly, I learn best by
-comparison.
+comparison, which is why I tried it in CoffeeScript and Scheme too. Here are the
+GitHub gists for the latter two:
+
+- CoffeeScript: [https://gist.github.com/936519][17]
+- Scheme: [https://gist.github.com/936695][18]
 
 
 Constraints
@@ -1211,3 +1215,5 @@ References
 [14]: http://vimeo.com/20963938
 [15]: http://vimeo.com/21307543
 [16]: http://vimeo.com/23125621
+[17]: https://gist.github.com/936519
+[18]: https://gist.github.com/936695
