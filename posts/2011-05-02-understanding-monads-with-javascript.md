@@ -1169,8 +1169,8 @@ domain specific language (<abbr title="Embedded Domain Specific Language">EDSL</
 
 The End
 -------
-Well, I hope you'll have found this article useful. Writing it definitely helped
-me having a better understanding of monads.
+Well, I hope you found this article useful. Writing it definitely helped me
+having a better understanding of monads.
 
 
 
