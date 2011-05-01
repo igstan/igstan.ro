@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+ul, ol {
+  padding-left: 25px;
+}
 .posts li, .social li, .all-posts li {
   padding: 0;
   margin-bottom: 0;
@@ -93,6 +96,16 @@ img, iframe {
   border: none;
 }
 
+table {
+  width: 98%;
+  margin: auto;
+  border-collapse: collapse;
+}
+td {
+  padding: 5px 10px;
+  border: solid #999 1px;
+}
+
 code {
 /*
   To achive decent font sizes on all browsers, I had to use 80% which works best
@@ -108,6 +121,10 @@ code {
   background: #F4F4F4;
 }
 
+h2 code, p code {
+  font-size-adjust: 0.6;
+}
+
 a:hover code {
   background: transparent;
 }
@@ -116,7 +133,7 @@ pre code {
   background: transparent;
   width: 700px;
   display: block;
-  margin: 20px 0 30px 0;
+  margin: 20px 0;
   padding: 0 0 0 10px;
   overflow: auto;
   border-left: dotted #999 1px;
@@ -137,7 +154,6 @@ pre code {
 
 .container {
   width: 660px;
-  text-align: justify;
   padding-right: 5px;
   margin: 50px 0 70px 200px;
   background: white;
