@@ -862,10 +862,10 @@ is a callback that contains the computation over the result of the monadic actio
 The callback is called with all the non-`undefined` results of the monadic actions.
 
 ~~~ {.javascript}
-var sequence = function (/* monadicActions..., final */) {
+var sequence = function (/* monadicActions..., continuation */) {
   var args           = [].slice.call(arguments);
   var monadicActions = args.slice(0, -1);
-  var finalResult    = args.slice(-1)[0];
+  var continuation   = args.slice(-1)[0];
 
   return function (stack) {
     var initialState = { values: [], stack: stack };
@@ -938,10 +938,10 @@ when calling `sequence` to separate monadic actions.
     };
   };
 
-  var sequence = function (/* monadicActions, final */) {
+  var sequence = function (/* monadicActions..., continuation */) {
     var args           = [].slice.call(arguments);
     var monadicActions = args.slice(0, -1);
-    var continuation  = args.slice(-1)[0];
+    var continuation   = args.slice(-1)[0];
 
     return function (stack) {
       var initialState = { values: [], stack: stack };
