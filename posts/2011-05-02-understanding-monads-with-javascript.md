@@ -1190,6 +1190,7 @@ References
     - [Monadic Parsing in Haskell][8]
     - [Monadic Parser Combinators][9]
     - [Monads in Python][10]
+    - [What the hell are Monads?][19]
 
 - Videos
     - [The Quick Essence of Functional Programming][11]
@@ -1217,3 +1218,4 @@ References
 [16]: http://vimeo.com/23125621
 [17]: https://gist.github.com/936519
 [18]: https://gist.github.com/936695
+[19]: http://web.cecs.pdx.edu/~antoy/Courses/TPFLP/lectures/MONADS/Noel/research/monads.html
