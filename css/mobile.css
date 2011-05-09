@@ -83,6 +83,11 @@ a[href$=".pdf"] {
   background-position: 98% 50%;
 }
 
+.terminal {
+  color: #F5F5F5;
+  background: black;
+  padding: 3px 4px;
+}
 
 /* code highlighting -------------------------------------------------------- */
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
