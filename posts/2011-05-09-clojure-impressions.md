@@ -4,11 +4,11 @@ author: Ionuț G. Stan
 date: May 09, 2011
 --------------------------------------------------------------------------------
 
-Following some unintentional peer pressure on Twitter, where people started
-acclaiming the recently published book "Joy of Clojure", and some others showing
-their solutions to the Clojure problems on [4clojure.com][1], I finally decided
-to try this language a bit. I've refrained myself for doing so for almost a year
-and a half. The main reason was that it didn't seem to be more elegant than Scheme.
+Following some unintentional peer pressure on Twitter, with people acclaiming
+the recently published book "Joy of Clojure", and some others showing their
+solutions to the Clojure problems on [4clojure.com][1], I finally decided
+to try this language a bit. I've refrained myself from doing so for almost a year
+and a half. The main reason was that it didn't seem to as elegant as Scheme.
 There's something about the look of Clojure programs that I resemble to dirt. I
 can't really put my finger on it, but that's what I feel sometimes. A second
 reason was the JVM. Just as with many other people, for some time I thought JVM
@@ -16,12 +16,12 @@ and Java are the same thing. Now I don't, but I still dislike the time it takes
 JVM to start up.
 
 The way I approached Clojure was by trying to solve the problems on [4clojure.com][1].
-I didn't read any tutorial before hand though. I'm familiar with Scheme, and
-lately I've been written some Haskell code too. So, both the basics of the syntax
+I didn't read any tutorial beforehand though. I'm familiar with Scheme, and
+lately I've been writing some Haskell code too. So, both the basics of the syntax
 and the paradigm (functional programming with laziness) were there. However,
 throughout the whole exercise I made good use of the reference on [clojuredocs.org][2].
 
-Below I'd like to capture my current impression with this language, while it's
+Below I'd like to capture my current impression about this language, while it's
 still fresh in my mind.
 
 
@@ -39,14 +39,14 @@ Strings and Characters
 This was my first WTF with Clojure. Mainly because now I expect every respectable
 programming language to treat strings the way Haskell does, i.e. as a list of
 characters. I quickly found out that strings in Clojure are... Java strings. Well,
-to be honest, I don't fucking care what language you used to implement Clojure.
+to be honest, I don't fucking care what language they used to implement Clojure.
 And the fact that they let this thing leak through didn't look good to me. This
-is actually a bigger problem with Clojure. There's leaks everywhere. If you want
-to maninulate strings or characters, you have to resort to the Java API for strings
-and characters. If you've got an exception in your program, well... you have to
-wade through the guts of the Clojure's internals in order to find the line number
-you're interested in. And that's when that number exists, because sometimes it's
-just 0.
+is actually a bigger problem with Clojure. It leaks implementation details in
+multiple places. If you want to manipulate strings or characters, you have to
+resort to the Java API for strings and characters. If you've got an exception in
+your program, well... you have to wade through the guts of the Clojure's internals
+stack trace in order to find the line number you're interested in. And that's when
+that number exists, because sometimes it's just 0.
 
 I know that strings are actually transformed to sequences in most of the core
 functions, but you still have to jump some hoops. Here's what I mean. Let's
@@ -102,7 +102,7 @@ documentation. Not unexpectedly, there's a `doc` function available inside the
 REPL that takes a function value (not function name) and returns its docs. Pretty
 much like Python's `help` function. However there's more in Clojure. You have
 access to every core function's source code by calling the `source` function.
-This is hugely useful because. As we all know, docs aren't perfect so it helps
+This is hugely useful because, as we all know, docs aren't perfect, so it helps
 to sometimes take a look at the source of the function and try to understand what
 that docstring is actually trying to say. There's also `find-doc` and `javadoc`.
 I really like this part of Clojure.
@@ -138,14 +138,14 @@ Polymorphism of `conj`
 ----------------------
 I don't think I have yet started to love this. `conj` seems too polymorphic for
 my taste. It may either prepend an element if the collection is a list, or append
-it if the collection is a vector. Not to mention it also works on maps and sets.
+it, if the collection is a vector. Not to mention it also works on maps and sets.
 
 I did't like `conj` especially when I had to work with functions generating lazy
 sequences. Whenever I saw `conj` I had to read carefully to see what kind of
 collection that `conj` acts on. Most of the time they're lists, but sometimes
 it's a vector and you end up with a reversed list without knowing why.
 
-`conj` It's useful, but I think it must be used with care.
+`conj` is useful, but I think it should be used with care.
 
 
 Laziness
