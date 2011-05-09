@@ -9,7 +9,7 @@ the recently published book "Joy of Clojure", and some others showing their
 solutions to the Clojure problems on [4clojure.com][1], I finally decided
 to try this language a bit. I've refrained myself from doing so for almost a year
 and a half. The main reason was that it didn't seem to as elegant as Scheme.
-There's something about the look of Clojure programs that I resemble to dirt. I
+There's something about the look of Clojure programs that reminds me of dirt. I
 can't really put my finger on it, but that's what I feel sometimes. A second
 reason was the JVM. Just as with many other people, for some time I thought JVM
 and Java are the same thing. Now I don't, but I still dislike the time it takes
