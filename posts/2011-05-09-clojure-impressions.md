@@ -170,10 +170,11 @@ and readable.
 Tail-Call Recursion
 -------------------
 Just as with laziness, you have to explicitly opt-in for tail-call recursion.
-It's the same thing as in any other language that support tail-calls, you have
-to make sure that the recursive call is the last thing that you're function does.
+It's the same thing as in any other language that supports tail-calls, you have
+to make sure that the recursive call is the last thing that your function does.
 However, in Clojure, you have to use the `recur` special form instead of the
-function name. That signals the Clojure compiler that you want tail-call recursion.
+function name. That signals the Clojure compiler that you want tail-call
+recursion.
 
 ~~~ {.clojure}
 (defn gcd [a b]
