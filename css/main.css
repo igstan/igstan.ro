@@ -189,6 +189,7 @@ section li {
   background: #f0f0f0;
   font-size: 90%;
   font-weight: normal;
+  border: solid #e0e0e0 1px;
 }
 
 article .related {
