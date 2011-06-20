@@ -79,7 +79,7 @@ JavaScript array objects have the usual methods one would expect from a stack,
 `push` and `pop`. What I don't like about it is that it mutates state. Well, I
 don't it like for the sake of this article, at least.
 
-Each step I'll describe is a working step. Just open you're browser's console
+Each step I'll describe is a working step. Just open your browser's console
 and reload this page. You should see several console groups with the string `5 : 4`
 logged inside. However, in the body of the article I'll only present those parts
 that differ from the previous steps.
