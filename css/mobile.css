@@ -89,6 +89,23 @@ a[href$=".pdf"] {
   padding: 3px 4px;
 }
 
+article .related {
+  position: relative;
+  padding: 3px;
+  margin-top: 50px;
+  text-align: left;
+  border: solid #e0e0e0 1px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+
+.igstan-twitter-button {
+  position: absolute;
+  left: 0;
+  top: -30px;
+}
+
+
 /* code highlighting -------------------------------------------------------- */
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
    { margin: 0; padding: 0; border: 0; vertical-align: baseline; border: none; }

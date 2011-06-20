@@ -183,12 +183,25 @@ section li {
 }
 
 .related {
-  margin: 10px 0;
+  margin: 10px 0 10px 0;
   padding: 5px;
   text-align: right;
   background: #f0f0f0;
   font-size: 90%;
   font-weight: normal;
+}
+
+article .related {
+  padding: 5px;
+  text-align: right;
+  margin: 50px 0 10px 0;
+}
+
+.igstan-twitter-button {
+  position: absolute;
+  top: auto;
+  left: 5px;
+  bottom: 0;
 }
 
 .talks {
