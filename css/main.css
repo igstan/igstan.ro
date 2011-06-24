@@ -148,8 +148,9 @@ pre code {
 
 .logo {
   position: fixed;
-  top: 53px;
+  top: 35px;
   left: 55px;
+  padding: 18px 0;
 }
 .logo:hover {
   background: transparent;
