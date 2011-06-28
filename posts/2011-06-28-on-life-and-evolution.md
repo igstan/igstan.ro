@@ -104,12 +104,12 @@ all, the world we would create would be based on the world we live in. Maybe we
 can sense some stuff by means of this experiment. Here's a little analogy for this.
 
 I find it pretty hard to imagine a world with four dimensions, but I can attempt
-to understand this if I imagine how two 1-dimensional world intersect themselves
+to understand this if I imagine how two 1-dimensional worlds intersect themselves
 to form a point. Then, two 2-dimensional worlds intersect themselves and form a
 1-dimensional world, a line. Finally, two 3-dimensional worlds intersect themselves
-to form a 2-dimensional world, a plane. However, not that for each intersection
-you actually need a superior dimension. To intersect two 2-dimensional world, that
-forms a 1-dimensional world you need a 3-dimensional world, otherwise the intersection
+to form a 2-dimensional world, a plane. However, note that for each intersection
+you actually need a superior dimension. To intersect two 2-dimensional worlds, that
+forms a 1-dimensional world, you need a 3-dimensional world, otherwise the intersection
 of two planes would be the same plane.
 
 Maybe, trying to create this world inside our world will actually help us understand
