@@ -77,4 +77,4 @@ Haskell. Although small, it encompasses a lot of advanced programming concepts
 unavailable in other languages (PHP for example, which is what I do for a living).
 
 
-[1]: http://github.com/igstan/plai-haskell
+[1]: http://github.com/igstan/plai
