@@ -8,7 +8,7 @@ date: March 5, 2010
 This is a thing I keep on forgetting although I've done it several times. So, I'm
 writing a blog post hoping it will help me memorize this.
 
-So... how do you rewrite Git's history, specifically the environment variables
+So... how do you rewrite Git's history, specifically the environment variables.
 With `git filter-branch` of course. I frequently need it in order to change the
 author and committer email addresses (either from personal to work or the other
 way around).
