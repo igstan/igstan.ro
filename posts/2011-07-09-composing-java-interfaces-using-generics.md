@@ -73,3 +73,11 @@ as a means to convey that it uses multiple type bounds, i.e., both `Queue<T>` an
 
 Regarding the syntax. Well, yes, I agree it is unnecessarily verbose, but at least
 it's possible.
+
+References
+----------
+- Gilad Bracha's [Generics in the Java Programming Language][1]
+- [Bounded Type Parameters][2]
+
+[1]: http://java.sun.com/j2se/1.5/pdf/generics-tutorial.pdf
+[2]: http://download.oracle.com/javase/tutorial/java/generics/bounded.html
