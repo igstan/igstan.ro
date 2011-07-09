@@ -55,6 +55,7 @@ of multiple typeclasses.
 
 ~~~ {.haskell}
 foo :: (Ord a, Show a) -> [a] -> [a]
+foo list = -- implementation
 ~~~
 
 So, my first thought was that Java does not permit this level of abstraction, but
@@ -72,7 +73,10 @@ as a means to convey that it uses multiple type bounds, i.e., both `Queue<T>` an
 `Set<T>`.
 
 Regarding the syntax. Well, yes, I agree it is unnecessarily verbose, but at least
-it's possible.
+it's possible. Although, on a second thought, the real problem is that the type
+declarations are interleaved with the method name and the formal parameter names.
+Haskell code seems more legible, to me at least, just because it separates the
+function signature from its implementation.
 
 References
 ----------
