@@ -6,7 +6,7 @@ date: July 09, 2011
 
 A few months ago I noticed an interesting aspect of the Java programming language.
 Everyone knows that a certain class can implement multiple interfaces in Java, but
-how would you specify in client code that you except an instance of an object that
+how would you specify in client code that you expect an instance of an object that
 implements multiple interfaces, without using the concrete type?
 
 Say for example that you create a `QueueSet` class which implements both `Queue<T>`
