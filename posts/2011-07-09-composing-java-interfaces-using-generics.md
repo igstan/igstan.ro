@@ -39,7 +39,7 @@ public class PeculiarQueueSet<T> implements QueueSet<T> {
 ~~~
 
 The problem here is that any other class that implements `Queue<T>` and `Set<T>`,
-but doesn't implement QueueSet<T>, won't satisfy the type signature of `foo`. It's
+but doesn't implement `QueueSet<T>`, won't satisfy the type signature of `foo`. It's
 a shame that we had to create a wrapper interface just for this. It would have been
 better to be able to specify inside `foo`, that the `queueSet` parameter is expected
 to be an instance of an object that implements both `Queue<T>` and `Set<T>`, without
