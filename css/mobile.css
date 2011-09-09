@@ -41,6 +41,19 @@ a[href$=".pdf"] {
   background-position: right 50%;
 }
 
+blockquote {
+  margin: 0;
+  padding: 5px 20px;
+  background: #f0f0f0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+blockquote p {
+  margin: 5px 0;
+}
+
 .social ul {
   margin: 0;
   padding: 0;
