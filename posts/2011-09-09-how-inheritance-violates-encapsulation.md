@@ -51,13 +51,13 @@ The above test fails with this message:
 
 > java.lang.AssertionError: expected:<3> but was:<6>
 
-It is entirely non-obvious why `addCount()` would return 6 instead of 3. After all,
+It is entirely non-obvious why `addCount` would return 6 instead of 3. After all,
 we only added three elements, right? The answer is that `HashSet.addAll()` uses
 internally the `add` method. This means, that inside `InstrumentedHashSet` we
 add 3 to `addCount` inside our overridden version of `addAll`, and then we add 1
 three more times to `addCount` for each call to `add` that `super.addAll` executes.
 
-This is such a simple and effective demonstration for a case when you really have
+This is such a simple and effective demonstration for a case where you really have
 to dig up the source of the parent class in order to find out the cause for the
 unexpected behaviour.
 
@@ -130,8 +130,8 @@ public static class InstrumentedHashSet<E> implements Set<E> {
     return wrappedSet.addAll(c);
   }
 
-  // Other methods required by the Set interface, whose implementation
-  // just delegate to the wrappedSet member. Skipped for brevity.
+  // The other methods required by the Set interface, which would just
+  // delegate to the wrappedSet member. Skipped for brevity.
 }
 ~~~
 
