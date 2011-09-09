@@ -153,7 +153,7 @@ public class InheritanceOverflowRevisited {
       barHelper();
     }
     
-    public void barHelper() {
+    private void barHelper() {
       // do bar stuff
     }
   }
