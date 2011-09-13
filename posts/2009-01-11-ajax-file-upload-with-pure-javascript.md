@@ -4,7 +4,19 @@ author: Ionuț G. Stan
 date: January 11, 2009
 --------------------------------------------
 
+<div class="warning">Warning! Article no longer relevant.</div>
 
+Update
+------
+The API I wrote about in this article has been removed from recent versions of
+Firefox. Instead, you can now use a [`FireReader`][11] object to read files on
+the client, and a [`FormData`][12] object to serialize such file values and POST
+them using asynchronous requests. These two objects are also available in Chrome
+and Safari, possible other browsers too. However, I'll keep the old article here
+for posterity. Here goes.
+
+Old Article
+-----------
 I don't know about you, but there's one little thing I've always hated about Ajax.
 The impossibility of file uploading. I still remember the ugly day when I
 discovered the terrible truth. There was no chance on earth you could send a file
@@ -796,3 +808,5 @@ their responsiveness further increased.
 [8]: https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters
 [9]: http://www.w3.org/TR/file-upload/
 [10]: https://github.com/igstan/ajax-file-upload
+[11]: https://developer.mozilla.org/en/DOM/FileReader
+[12]: https://developer.mozilla.org/en/XMLHttpRequest/FormData
