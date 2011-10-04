@@ -9,7 +9,7 @@ date: January 11, 2009
 Update
 ------
 The API I wrote about in this article has been removed from recent versions of
-Firefox. Instead, you can now use a [`FireReader`][11] object to read files on
+Firefox. Instead, you can now use a [`FileReader`][11] object to read files on
 the client, and a [`FormData`][12] object to serialize such file values and POST
 them using asynchronous requests. These two objects are also available in Chrome
 and Safari, possible other browsers too. However, I'll keep the old article here
