@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled</title>
+<style type="text/css">
+.drawing-area {
+  float: left;
+  text-align: center;
+}
+
+.controls {
+  float: left;
+  margin: 0 0 0 20px;
+  padding: 0;
+  color: #555;
+}
+
+.controls li {
+  vartical-align: middle;
+  list-style: none outside;
+}
+
+input[type=range] {
+  width: 400px;
+}
+
+.controls span, input[type=range], var {
+  float: left;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.controls span {
+  width: 60px;
+  line-height: 25px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+var {
+  margin-right: 5px;
+}
+
+canvas {
+  border: solid #999 1px;
+  box-shadow: inset 0 0 3px #e0e0e0;
+}
+</style>
+<script>
+var solverFrom = function (matrix) {
+  return function (x) {
+    return matrix.reduceRight(function (result, m, i) {
+      return result + m * Math.pow(x, i);
+    }, 0);
+  };
+};
+
+var rendererProto = {
+  set canvas(c) {
+    this.ctx = c.getContext("2d");
+    this.width = c.width;
+    this.height = c.height;
+  },
+
+  get centerX() {
+    return Math.floor(this.width  / 2) + 0.5;
+  },
+
+  get centerY() {
+    return Math.floor(this.height / 2) + 0.5;
+  },
+
+  drawY: function () {
+    this.ctx.beginPath();
+    this.ctx.moveTo(this.centerX, 0);
+    this.ctx.lineTo(this.centerX, this.height);
+    this.ctx.closePath();
+    this.ctx.strokeStyle = "red";
+    this.ctx.stroke();
+  },
+
+  drawX: function () {
+    this.ctx.beginPath();
+    this.ctx.moveTo(0, this.centerY);
+    this.ctx.lineTo(this.width, this.centerY);
+    this.ctx.closePath();
+    this.ctx.strokeStyle = "red";
+    this.ctx.stroke();
+  },
+
+  drawAxes: function () {
+    this.drawX();
+    this.drawY();
+  },
+
+  draw: function (matrix) {
+    var eq = solverFrom(matrix);
+
+    this.ctx.strokeStyle = "blue";
+    this.ctx.beginPath();
+
+    for (var i=0; i>=-Math.ceil(this.width/2); i--) {
+      this.ctx.moveTo(this.centerX + i, this.centerY - eq(i));
+      this.ctx.lineTo(this.centerX + i + 1, this.centerY - eq(i+1));
+    }
+
+    for (var i=0; i<Math.ceil(this.width/2); i++) {
+      this.ctx.moveTo(this.centerX + i, this.centerY - eq(i));
+      this.ctx.lineTo(this.centerX + i + 1, this.centerY - eq(i+1));
+    }
+
+    this.ctx.closePath();
+    this.ctx.stroke();
+  },
+
+  clear: function () {
+    this.ctx.clearRect(0, 0, this.width, this.height);
+    this.drawAxes();
+  }
+};
+
+var stepIncreaser = {
+  alreadyPressed: false,
+
+  get sliders() {
+    return [].slice.call(document.querySelectorAll("input[type=range]"));
+  },
+
+  increase: function () {
+    this.alreadyPressed = true;
+
+    this.sliders.forEach(function (slider) {
+      slider.step = parseFloat(slider.step) * 10;
+    });
+  },
+
+  decrease: function () {
+    this.alreadyPressed = false;
+
+    this.sliders.forEach(function (slider) {
+      slider.step = parseFloat(slider.step) / 10;
+    });
+  },
+
+  handleEvent: function (event) {
+    if (event.altKey && !this.alreadyPressed) {
+      this.increase();
+    }
+    if (!event.altKey && this.alreadyPressed) {
+      this.decrease();
+    }
+  }
+};
+
+var createX = function (power, parent, update) {
+  var html = "<label>"
+           +   "<var>x<sup>" + power + "</sup>:</var>"
+           +   "<span>0.00000</span>"
+           +   "<input title='Hold down the ALT key to increase the step amount by 10.' type='range' step='0.00001' min='-4' max='4'>"
+           + "</label>";
+
+  var li = document.createElement("li");
+  li.innerHTML = html;
+  li = parent.appendChild(li);
+
+  var span  = li.getElementsByTagName("span")[0];
+  var range = li.getElementsByTagName("input")[0];
+
+  range.addEventListener("change", function (event) {
+    span.innerHTML = parseFloat(this.value).toFixed(5);
+  }, false);
+
+  range.addEventListener("change", update, false);
+};
+
+var update = function (renderer) {
+  return function (event) {
+    var ranges = [].slice.call(document.querySelectorAll("input[type=range]")).map(function (range) {
+      return parseFloat(range.value).toFixed(5);
+    });
+
+    renderer.clear();
+    renderer.draw(ranges);
+  };
+};
+
+window.addEventListener("DOMContentLoaded", function (event) {
+  var renderer = Object.create(rendererProto);
+  renderer.canvas = document.querySelector("#canvas");
+
+  var addControl = function (power) {
+    createX(power, document.querySelector(".controls"), update(renderer));
+  };
+
+  document.addEventListener("keydown", stepIncreaser, false);
+  document.addEventListener("keyup", stepIncreaser, false);
+
+  for (var i=0; i < 10; i++) {
+    addControl(i);
+  };
+
+  renderer.drawAxes();
+  renderer.draw([0, 0.8, 0.009]);
+
+}, false);
+</script>
+</head>
+<body>
+
+<div class="drawing-area">
+  <canvas id="canvas" width="800" height="500"></canvas>
+</div>
+
+<ol class="controls">
+  <!-- populated from JS -->
+</ol>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6642500-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>
