@@ -4,7 +4,7 @@ author: Ionuț G. Stan
 date: January 11, 2009
 --------------------------------------------
 
-<div class="warning">Warning! Article no longer relevant.</div>
+<div class="warning">Warning! Outdated article.</div>
 
 Update
 ------
