@@ -3,14 +3,14 @@
 ul, ol {
   padding-left: 25px;
 }
-.posts li, .social li, .all-posts li {
+.posts li, .online li, .all-posts li {
   padding: 0;
   margin-bottom: 0;
   border: none;
   background-color: transparent;
   border-radius: 0;
 }
-.social li {
+.online li {
   padding-left: 22px;
   background-position: 0px 50%;
 }

@@ -13,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.posts li, .social li, .all-posts li {
+.posts li, .online li, .all-posts li {
   padding: 4px;
   margin-bottom: 7px;
   border: solid #e0e0e0 1px;
@@ -54,7 +54,7 @@ blockquote p {
   margin: 5px 0;
 }
 
-.social ul {
+.online ul {
   margin: 0;
   padding: 0;
   list-style: none outside;
@@ -70,7 +70,7 @@ blockquote p {
   display: none;
 }
 
-.social li {
+.online li {
   padding-left: 23px;
   background-repeat: no-repeat;
   background-position: 3px 50%;
