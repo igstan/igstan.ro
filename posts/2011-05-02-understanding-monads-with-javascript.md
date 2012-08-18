@@ -812,7 +812,7 @@ A monad is a pretty abstract concept because it specifies little about what you
 have to write. Mainly, it says that you need to design a function which will
 take some arguments (the state in the case of the state monad), and two additional
 functions: `result` and `bind`. The former will act as a factory for the function
-you just designed. The latter we'll be responsible for exposing just enough details
+you just designed. The latter will be responsible for exposing just enough details
 about your monad to the outside world, and also perform some boring stuff like
 passing state around. Exposing is done by means of a continuation function that
 will take the value that the monad computes. Everything that is internal to the
@@ -1096,7 +1096,7 @@ console.log( evalStack(composed, []) ); // "5 : 4 : 3 : 2"
       return { value: value, stack: stack };
     };
   };
-  
+
   var evalStack = function (stackOperation, initialStack) {
     return stackOperation(initialStack).value;
   };
