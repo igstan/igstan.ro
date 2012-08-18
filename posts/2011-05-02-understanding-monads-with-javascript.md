@@ -834,7 +834,7 @@ The main reason the Haskell version looks better is because Haskell has built-in
 syntactic support for monads in the form of the `do` notation. `do` notation is
 just sugar for the following version, which still looks better than the JavaScript
 one. Haskell, having support for operator definitions and terse lambda expressions
-allows for more readable, in my opinion, implementation of monads.
+allows for a more readable, in my opinion, implementation of monads.
 
 ~~~ {.haskell}
 computation = push 4 >>= \_ ->
