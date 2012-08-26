@@ -14,6 +14,12 @@ res0: List[Int] = List(1, 2, 3, 4)
 The behaviour of `>>=` in Haskell:
 
 <pre class="terminal">
-Prelude> [1, 2, 3, 4] >>= return . Just
-[Just 1,Just 2,Just 3,Just 4]
+> [1, 2, 3, 4] >>= Just
+
+&lt;interactive&gt;:4:18:
+    Couldn't match expected type `[b0]' with actual type `Maybe a0'
+    Expected type: a0 -> [b0]
+      Actual type: a0 -> Maybe a0
+    In the second argument of `(>>=)', namely `Just'
+    In the expression: [1, 2, 3, 4] >>= Just
 </pre>
