@@ -4,6 +4,12 @@ author: Ionuț G. Stan
 date: May 02, 2011
 --------------------------------------------------------------------------------
 
+Update
+------
+A [Portuguese translation][20] of this article is now available on [imasters.com.br][20].
+
+--------------------------------------------------------------------------------
+
 For the past weeks I've been working hard studying monads. I'm still learning
 Haskell, and to be honest I thought I knew what monads are all about, but when
 I wanted to write a little Haskell library, just to sharpen up my skills, I
@@ -1219,3 +1225,4 @@ References
 [17]: https://gist.github.com/936519
 [18]: https://gist.github.com/936695
 [19]: http://web.cecs.pdx.edu/~antoy/Courses/TPFLP/lectures/MONADS/Noel/research/monads.html
+[20]: http://imasters.com.br/linguagens/javascript/compreendendo-monads-com-javascript/
