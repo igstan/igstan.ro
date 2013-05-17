@@ -4,8 +4,8 @@ author: Ionuț G. Stan
 date: May 17, 2013
 --------------------------------------------------------------------------------
 
-Dear younger me, here's a quick way to try out a new library in the Scala REPL
-without creating a brand new Scala project.
+Dear younger me, here's a quick way to try out a new third-party library in the
+Scala REPL without having to create a new sbt project or edit the sbt build file.
 
 In this particular example I'm just playing around with [dispatch][0], trying to
 see whether it sends the correct query parameters to [httpbin.org](http://httpbin.org).
