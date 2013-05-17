@@ -101,4 +101,32 @@ scala> Success({
 scala>
 </pre>
 
+## Improvements
+I've created a bash alias that saves me from creating a scratch directory
+everytime I'd like to play with some library:
+
+~~~bash
+take () {
+  mkdir -p $1 &&
+  cd $1
+}
+
+alias sbtemp="take '$HOME/.sbt-playground' && sbt"
+~~~
+
+Also, because the command to add a library dependency is quite long, I've created
+an sbt alias in `$HOME/.sbtrc`:
+
+~~~
+alias dep=set libraryDependencies +=
+~~~
+
+Now, all I have to type in the sbt console is this command:
+
+<pre class="terminal">
+> dep "net.databinder.dispatch" %% "dispatch-core" % "0.10.0"
+</pre>
+
+
+
 [0]: http://dispatch.databinder.net/Dispatch.html
