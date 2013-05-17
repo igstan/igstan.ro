@@ -102,7 +102,7 @@ scala>
 </pre>
 
 ## Improvements
-I've created a bash alias that saves me from creating a scratch directory
+I've added a bash alias that saves me from creating a scratch directory
 everytime I'd like to play with some library:
 
 ~~~bash
@@ -111,7 +111,7 @@ take () {
   cd $1
 }
 
-alias sbtemp="take '$HOME/.sbt-playground' && sbt"
+alias sbt-playground="take '$HOME/.sbt-playground' && sbt"
 ~~~
 
 Also, because the command to add a library dependency is quite long, I've created
