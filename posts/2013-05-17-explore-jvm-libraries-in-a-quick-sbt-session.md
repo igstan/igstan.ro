@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-title: Quick sbt Session
+title: Explore JVM Libraries in a Quick sbt Session
 author: Ionuț G. Stan
 date: May 17, 2013
 --------------------------------------------------------------------------------
