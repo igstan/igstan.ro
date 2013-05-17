@@ -71,7 +71,7 @@ u: com.ning.http.client.RequestBuilder = com.ning.http.client.RequestBuilder@2cc
 
 ### Add Some Query Params
 <pre class="terminal">
-scala> u <<? Seq("a" -> "foo", "b" -> "bar")
+scala> u &lt;&lt;? Seq("a" -> "foo", "b" -> "bar")
 res0: com.ning.http.client.RequestBuilder = com.ning.http.client.RequestBuilder@2cce6b12
 </pre>
 
