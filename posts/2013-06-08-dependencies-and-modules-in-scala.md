@@ -311,6 +311,8 @@ class Aliased_Talker {
 }
 ```
 
+The Cake Pattern. When?
+-----------------------
 Okay, that was my little rant concerning the cake pattern. I believe people give
 it too much credit for no added benefit over what we were already able to do in
 Java. Any counter-argument will be greatly appreciated. I haven't written this
