@@ -316,7 +316,7 @@ it too much credit for no added benefit over what we were already able to do in
 Java. Any counter-argument will be greatly appreciated. I haven't written this
 blog post to prove someone is wrong. I actually wrote it so that I know what's the
 best tool for the job. And when it comes to DI in Scala, I see no clear arguments
-that the cake pattern is good for me.
+that the cake pattern is best for me.
 
 Oh... I'm lying. There's actually a situation when there's no other choice. That's
 when you have no control over your own constructors, e.g., the Servlet API.
