@@ -232,7 +232,7 @@ What can we use in Scala to declared these dependencies? Self-types, of course:
 
 ```scala
 /**
- * This traits provides the caching boilerplate, but leaves undefined
+ * This trait provides the caching boilerplate, but leaves undefined
  * the mechanism that provides a fresh, non-cached, Student. Also, we
  * don't specify anything about the implementation of Cache. These are
  * the two interfaces: StudentRepository.slowGet and Cache.get that
