@@ -18,7 +18,7 @@ anything.
 
 Why is the cake pattern better than the "classical" constructor-based injection?
 How isn't a simple interface/trait better than this contraption using nested
-traits, abstract types aliases, and long lists of traits being mixed in. Or...
+traits, abstract type aliases, and long lists of traits being mixed in. Or...
 ok, let me rephrase it. **When** is the cake pattern better than "classical"
 constructor-based injection? I have yet to see a convincing answer. On the other
 hand, I can tell you when the cake pattern is categorically weaker than normal
