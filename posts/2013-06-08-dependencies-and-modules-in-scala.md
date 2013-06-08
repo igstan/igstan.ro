@@ -338,8 +338,8 @@ There are two things I haven't yet explored in this post:
    future blog post.
 
 
-References
-----------
+Resources
+---------
 - Videos
     - [Cake Pattern: The Bakery from the Black Lagoon ][0]
     - [Living in a Post-Functional World][1]
