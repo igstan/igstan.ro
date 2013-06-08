@@ -266,7 +266,7 @@ trait CachingStudentRepository extends StudentRepository {
 
 This will still cause namespacing issues if a `CachingTeacherRepository` will
 declare an abstract `cache` member as well. It's actually the same problem that
-the cake patterns suffers from. You won't be able to provide different
+the cake pattern suffers from. You won't be able to provide different
 implementations for the same interface.
 
 A simple solution is to prepend, or append, the trait name to the member:
