@@ -271,8 +271,8 @@ implementations for the same interface.
 
 A simple solution is to prepend, or append, the trait name to the member:
 `cachingStudentRepositoryCache`. Not so nice, eh? It would be nice if Scala
-would allow us to rename members inherited from traits, like say... PHP 5.4
-does, a language everybody loves to hate:
+would allow us to rename members inherited from traits, like say... [PHP 5.4
+does][4], a language everybody loves to hate:
 
 ```php
 <?php
@@ -356,3 +356,4 @@ Resources
 [1]: http://2013.flatmap.no/spiewak.html
 [2]: http://marakana.com/s/post/1108/dependency_injection_in_scala
 [3]: http://jonasboner.com/2008/10/06/real-world-scala-dependency-injection-di/
+[4]: http://php.net/manual/ro/language.oop5.traits.php
