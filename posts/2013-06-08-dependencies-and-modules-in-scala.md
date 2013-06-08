@@ -65,8 +65,8 @@ trait TeacherRepository {
 }
 ```
 
-Their implementation supports caching, which can be inferred by observing the
-constructor argument.
+There are two implementations of them that support caching, which can be inferred
+by observing the constructor arguments.
 
 ```scala
 /**
