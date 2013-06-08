@@ -228,7 +228,7 @@ can imagine that the implementation of `PostgresStudentRepository.get` will
 first verify the `cache` and just when there's no value in the cache it will
 actually execute a database query. This piece of caching logic can be abstracted
 away, but notice that it depends on two traits: `Cache` and `StudentRepository`.
-What can we use in Scala to declared these dependencies? Self-types, of course:
+What can we use in Scala to declare these dependencies? Self-types, of course:
 
 ```scala
 /**
