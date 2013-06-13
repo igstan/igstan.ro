@@ -81,7 +81,7 @@ class PostgresStudentRepository(cache: Cache[String, String]) extends StudentRep
 /**
  * Same thing as with PostgresStudentRepository.
  */
-class PostgresTeacherRepository(cache: Cache[String, String]) extends StudentRepository {
+class PostgresTeacherRepository(cache: Cache[String, String]) extends TeacherRepository {
   override def all = ???
   override get get(id: String) = ???
 }
