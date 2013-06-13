@@ -27,7 +27,7 @@ h4 {
 h5 {
     font-size: 100%;
 }
-.position, .period {
+.position, .period, #open-source li span {
     font-size: 80%;
     color: #666;
 }
@@ -38,6 +38,10 @@ ol, #web-presence ul {
 }
 #experience ol, #web-presence div {
     padding: 15px 0 0 0;
+}
+#experience ol ol {
+    padding: 5px 0 10px 0;
+    list-style: decimal inside;
 }
 #experience li {
     padding-bottom: 5px;
@@ -84,11 +88,11 @@ dt {
     font-size: 100%;
     padding-top: 10px;
 }
-#experience .technologies-used ul {
+#experience ul {
     margin: 0;
     padding: 10px 0 0 25px;
 }
-#experience .technologies-used li {
+#experience li li {
     margin: 0;
     padding: 0 0 5px 0;
     border-bottom: none;
