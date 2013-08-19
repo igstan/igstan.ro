@@ -228,6 +228,10 @@ article time[pubdate] {
   font-size: 70%;
 }
 
+article p {
+  text-align: justify;
+}
+
 .copyright {
   color: #808080;
   position: fixed;
