@@ -48,7 +48,7 @@ There are two conceptual mappings here. At a higher-level you want to map
 is required — from `T` to `S` — hence "contra".
 
 Generalizing we get that `contramap` is a function which says that if you give
-it some abstraction over a concept `A`, i.e., `F[A]`), and a function that maps
+it some abstraction over a concept `A`, i.e., `F[A]`, and a function that maps
 from a different concept `B` to the concept `A`, then it is able to give you back
 an abstraction over `B`, i.e., `F[B]`. Pretty abstract maybe, but bear with me.
 
