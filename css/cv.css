@@ -1,99 +1,99 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 body {
-    width: 650px;
-    padding: 30px 0 50px 30px;
-    color: #333;
-    font-size: 90%;
-    font-family: "Lucida Grande",Helvetica, Verdana, Arial, sans-serif;
+  width: 650px;
+  padding: 30px 0 50px 30px;
+  color: #333;
+  font-size: 90%;
+  font-family: 'lucida grande', helvetica, verdana, arial, sans-serif;
 }
 a:link, a:visited {
-    color: #1948FF;
+  color: #1948FF;
 }
 h1, h2, h3, h4, h5, h6 {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
 }
 h2 {
-    padding: 2px 4px;
-    color: white;
-    background: #444;
+  padding: 2px 4px;
+  color: white;
+  background: #444;
 }
 h4 {
-    font-size: 120%;
-    font-weight: bold;
+  font-size: 120%;
+  font-weight: bold;
 }
 h5 {
-    font-size: 100%;
+  font-size: 100%;
 }
 .position, .period, #open-source li span {
-    font-size: 80%;
-    color: #666;
+  font-size: 80%;
+  color: #666;
 }
 ol, #web-presence ul {
-    padding: 0;
-    margin: 0;
-    list-style: none outside;
+  padding: 0;
+  margin: 0;
+  list-style: none outside;
 }
 #experience ol, #web-presence div {
-    padding: 15px 0 0 0;
+  padding: 15px 0 0 0;
 }
 #experience ol ol {
-    padding: 5px 0 10px 0;
-    list-style: decimal inside;
+  padding: 5px 0 10px 0;
+  list-style: decimal inside;
 }
 #experience li {
-    padding-bottom: 5px;
-    margin: 0 0 35px 0;
-    border-bottom: dotted #666 1px;
+  padding-bottom: 5px;
+  margin: 0 0 35px 0;
+  border-bottom: dotted #666 1px;
 }
 p {
-    margin: 0;
-    padding: 10px 0;
-    line-height: 130%;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 130%;
 }
 #ionut-g-stan {
-    float: left;
-    display: inline;
+  float: left;
+  display: inline;
 }
 #header {
-    overflow: hidden;
-    padding-bottom: 50px;
+  overflow: hidden;
+  padding-bottom: 50px;
 }
 #contact {
-    float: right;
-    display: inline;
-    width: 250px;
+  float: right;
+  display: inline;
+  width: 250px;
 }
 dl {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 dt {
-    float: left;
-    display: inline;
-    width: 60px;
-    text-align: right;
-    padding-right: 15px;
+  float: left;
+  display: inline;
+  width: 60px;
+  text-align: right;
+  padding-right: 15px;
 }
 #summary,
 #skills,
 #open-source,
 #communities {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 #experience .technologies-used h6 {
-    font-weight: bold;
-    font-size: 100%;
-    padding-top: 10px;
+  font-weight: bold;
+  font-size: 100%;
+  padding-top: 10px;
 }
 #experience ul {
-    margin: 0;
-    padding: 10px 0 0 25px;
+  margin: 0;
+  padding: 10px 0 0 25px;
 }
 #experience li li {
-    margin: 0;
-    padding: 0 0 5px 0;
-    border-bottom: none;
+  margin: 0;
+  padding: 0 0 5px 0;
+  border-bottom: none;
 }
