@@ -98,7 +98,7 @@ is marked as being implicit because we want the compiler to use it when we use
 the comparison method `<`.
 
 ```scala
-implicit val moneyOrd: Ordering[Money] = Ordering.by
+implicit val moneyOrd: Ordering[Money] = Ordering.by(contramapFn)
 ```
 
 Now we can easily compare `Money` instances (we still need an implicit conversion
