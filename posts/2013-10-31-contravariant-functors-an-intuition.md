@@ -157,7 +157,7 @@ Resources
 - [I love profunctors. They're so easy.][1]
 - [Contravariant functors package][2] on Hackage
 
-[0]: http://tmorris.net/posts/2013-03-01-functors-and-things-using-scala.html
+[0]: http://tmorris.net/posts/functors-and-things-using-scala/index.html
 [1]: https://www.fpcomplete.com/school/to-infinity-and-beyond/pick-of-the-week/profunctors
 [2]: http://hackage.haskell.org/package/contravariant-0.4.4/docs/Data-Functor-Contravariant.html
 [3]: https://github.com/scala/scala/blob/v2.10.3/src/library/scala/math/Ordering.scala#L218
