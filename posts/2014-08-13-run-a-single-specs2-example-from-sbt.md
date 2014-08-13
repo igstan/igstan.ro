@@ -50,9 +50,9 @@ different [set of arguments][1].
 
 <pre class="terminal">sbt&gt; testOnly -- -ex "this is example two"</pre>
 
-This works, but the reporter will show even the names of the groups that haven't
-been run, which makes it hard to figure out where's the actual failed test.
-For this reason, the command I'm actually using is akin to this one:
+This works, but the test reporter will show even the names of the groups that
+haven't been run, which makes it hard to figure out where's the actual failed
+test. For this reason, the command I'm actually using is akin to this one:
 
 <pre class="terminal">sbt&gt; testOnly *ExampleSpec -- -ex "this is example two"</pre>
 
