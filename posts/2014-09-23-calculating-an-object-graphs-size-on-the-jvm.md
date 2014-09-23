@@ -100,9 +100,9 @@ about jol.
 
 ## References
 
- - jol — [https://openjdk.java.net/projects/code-tools/jol/]()
+ - jol — [http://openjdk.java.net/projects/code-tools/jol/][0]
  - [Java Object Layout: A Tale Of Confusion ](http://psy-lob-saw.blogspot.ro/2014/03/java-object-layout-tale-of-confusion.html)
- - [http://bboniao.com/openjdk/2014-06/java-object-layoutjol.html]()
+ - [http://bboniao.com/openjdk/2014-06/java-object-layoutjol.html](http://bboniao.com/openjdk/2014-06/java-object-layoutjol.html)
 
-[0]: https://openjdk.java.net/projects/code-tools/jol/
+[0]: http://openjdk.java.net/projects/code-tools/jol/
 [1]: http://hg.openjdk.java.net/code-tools/jol
