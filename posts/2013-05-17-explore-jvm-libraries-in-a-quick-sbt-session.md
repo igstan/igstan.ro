@@ -103,7 +103,7 @@ scala>
 
 ## Improvements
 I've added a bash alias that saves me from creating a scratch directory
-everytime I'd like to play with some library:
+every time I'd like to play with some library:
 
 ~~~bash
 take () {
