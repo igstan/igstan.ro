@@ -6,7 +6,8 @@ date: May 02, 2011
 
 Update
 ------
-A [Portuguese translation][20] of this article is now available on [imasters.com.br][20].
+
+Nice people have translated this article into [Portuguese][20] and [Russian][21].
 
 --------------------------------------------------------------------------------
 
@@ -1226,3 +1227,4 @@ References
 [18]: https://gist.github.com/936695
 [19]: http://web.cecs.pdx.edu/~antoy/Courses/TPFLP/lectures/MONADS/Noel/research/monads.html
 [20]: http://imasters.com.br/linguagens/javascript/compreendendo-monads-com-javascript/
+[21]: http://habrahabr.ru/post/238171/
