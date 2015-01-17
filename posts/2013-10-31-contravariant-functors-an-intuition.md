@@ -124,7 +124,7 @@ this (the [real one][3] is a bit more complicated due to optimizations):
 ```scala
 def by[T, S](f: T => S)(implicit ord: Ordering[S]): Ordering[T] =
   new Ordering[T] {
-    def compare(x:T, y:T) = Ordering[S].compare(f(x), f(y))
+    def compare(x:T, y:T) = ord.compare(f(x), f(y))
   }
 ```
 
