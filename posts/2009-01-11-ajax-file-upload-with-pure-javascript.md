@@ -141,7 +141,7 @@ var upload = function() {
     var file = photo.files[0];
 
     console.log("File name: " + file.fileName);
-    console.log("File name: " + file.fileSize);
+    console.log("File size: " + file.fileSize);
 
     return false;
 };
