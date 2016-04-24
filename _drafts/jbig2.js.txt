@@ -1,0 +1,7 @@
+- learned about two's complement
+- arithmetic coding
+- bit twiddling
+- develop software by following a dense specification
+- read (lots of) other people's code
+- leave a failing test when you call it a day. it will be easier to boot up
+  next time when you resume work on the project

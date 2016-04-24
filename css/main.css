@@ -1,261 +1,497 @@
-@charset "UTF-8";
-
-ul, ol {
-  padding-left: 25px;
-}
-.posts li, .online li, .all-posts li {
-  padding: 0;
-  margin-bottom: 0;
-  border: none;
-  background-color: transparent;
-  border-radius: 0;
-}
-.online li {
-  padding-left: 22px;
-  background-position: 0px 50%;
-}
-.posts time[pubdate],
-.all-posts time[pubdate] {
-  display: inline;
-  margin-top: 0;
-  color: inherit;
-  font-size: inherit;
-}
-.posts time[pubdate]:before,
-.all-posts time[pubdate]:before {
-  content: " - ";
-}
-
-@font-face {
-  font-family: Museo;
-  src: url(./fonts/Museo300-Regular.otf);
-}
-
-a, .related {
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-}
-
-a:hover {
-  color: white;
-  outline: none;
-  background-color: #2060A0;
-  text-decoration: none;
-}
-
-a:focus {
-  /* !important to override disqus global styles for link outline */
-  outline: solid #2060A0 3px !important;
-  outline-offset: 3px;
-  outline-radius: 5px;
-  -moz-outline-radius: 5px;
-}
-
-/* fix disqus styles for my theme */
-#dsq-content a:link, #dsq-content a:visited {
-  color: inherit;
-  overflow: hidden;
-}
-#dsq-content a:focus {
-  outline: none;
-}
-#dsq-content .dsq-global-toolbar-likes {
-  overflow: visible !important;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-size: 100%;
-  font-family: Museo, Palatino, Georgia, Serif;
-  background: white url(graphics/main-bg.png) no-repeat 105% 105% fixed;
-}
-
-.warning {
-  height: 50px;
-  padding: 5px 5px 5px 70px;
-  background-image: url(data:image/png;base64,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);
-  font-size: 160%;
-  line-height: 50px;
-}
-
-h1, h2, h3, .warning {
-  font-family: Palatino, Georgia, Serif;
-}
-
-h1, h2, h3 {
+  color: #333;
   margin: 0;
   padding: 0;
+  font-size: 95%;
+  font-family: raleway, helvetica, sans-serif;
+}
+
+a:link, a:visited {
+  color: #2574C4;
+  text-decoration: underline;
+}
+
+/*a + a::before {
+  content: "| ";
+}*/
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: raleway, palatino, 'palatino linotype', serif;
   font-weight: normal;
 }
 
 h1 {
-  width: 800px;
-  font-size: 220%;
+  font-size: 180%;
+  padding: 35px 10px;
+  margin: 0;
+  text-align: center;
+  width: 670px;
 }
 
 h2 {
   font-size: 160%;
-  padding-top: 10px;
+  border-bottom: 1px dotted #9f9f9f;
 }
 
 h3 {
-  font-size: 140%;
-  padding-top: 10px;
+  font-size: 130%;
+  border-bottom: 1px dotted #9f9f9f;
 }
 
-img, iframe {
-  border: none;
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px dotted #9f9f9f;
 }
 
-table {
-  width: 98%;
-  margin: auto;
-  border-collapse: collapse;
-}
-td {
-  padding: 5px 10px;
-  border: solid #999 1px;
+h2 code {
+  font-family: 'droid sans mono', menlo, monaco, consolas, 'lucida console', 'courier new', monospace;
 }
 
-.terminal, code {
-  font-size: 80%;
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", Monospace;
+main {
+  width: 670px;
+  margin: 0 auto;
 }
 
-code {
-/*
-  To achive decent font sizes on all browsers, I had to use 80% which works best
-  for preferred font families, and adjust the size in Firefox which does not
-  uses the page font size as a reference for the 100% value inherited from the
-  body, but instead uses the font size set in the preferences for monospace
-  fonts. The default is 13px, and 80% out of 13px is way too small. Using
-  font-size-adjust, which is only understood by Firefox fixes this.
-*/
-  font-size-adjust: 0.7;
-  background: #F4F4F4;
+main p {
+  line-height: 140%;
+  text-align: justify;
 }
 
-h2 code, p code {
-  font-size-adjust: 0.6;
+li {
+  line-height: 140%;
 }
 
-a:hover code {
-  background: transparent;
+ul {
+  margin: 15px 0 15px 25px;
+  padding: 0;
+  list-style: circle outside;
 }
 
-pre code {
-  background: transparent;
-  width: 700px;
-  display: block;
-  margin: 20px 0;
-  padding: 0 0 0 10px;
-  overflow: auto;
-  border-left: dotted #999 1px;
+ol {
+  margin: 15px 0 15px 20px;
+  padding: 0;
+  list-style-position: outside;
 }
 
-.gdoc {
-  text-align: center;
+ul ul {
+  margin: 0 0 0 15px;
 }
 
-.logo {
-  position: fixed;
-  top: 35px;
-  left: 55px;
-  padding: 18px 0;
-}
-.logo:hover {
-  background: transparent;
+p code, li code {
+  font-family: 'courier new', monospace;
+  font-size: 95%;
+  background: #F5F5F5;
 }
 
-.container {
-  width: 660px;
-  padding-right: 5px;
-  margin: 50px 0 70px 200px;
-  background: white;
-}
-
-section {
-  margin: 0 0 40px 0;
-}
-
-section h1 {
-  width: inherit;
-  padding-bottom: 5px;
-  border-bottom: dotted #333 1px;
-}
-
-section ul, section ol {
-  list-style: none outside;
+.highlight pre, .terminal {
   margin: 0;
   padding: 0;
 }
 
-section li {
-  margin: 5px 0;
+.highlight pre code, .terminal {
+  font-family: 'droid sans mono', menlo, monaco, consolas, 'lucida console', 'courier new', monospace;
+  display: block;
+  margin: 20px 0;
+  padding: 3px 7px;
+  border-left: solid #d0d0d0 1px;
+  background: #F5F5F5;
+}
+
+.terminal {
+  font-size: 80%;
+}
+
+.highlight pre code > span {
+  display: block;
+}
+
+.highlight pre code {
+  counter-reset: linenumbers;
+  position: relative;
+}
+
+.highlight pre code > span:before {
+  position: absolute;
+  color: #b0b0b0;
+  content: counter(linenumbers);
+  counter-increment: linenumbers;
+  left: -58px;
+  width: 50px;
+  text-align: right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.highlight pre code .lineno {
+  display: inline-block;
+  text-align: right;
+  font-size: 90%;
+  line-height: 90%;
+  color: #666;
+}
+
+.hll {
+  display: block;
+  background: #fff5ed;
+  background: #ffc0c6;
+}
+
+.highlight pre code.language-console {
+  background: black;
+  border-radius: 2px;
+  border-color: black;
+}
+
+.highlight code.language-console span {
+  color: #fdfdfd;
+}
+
+/* http://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+blockquote {
+  font-size: 110%;
+  color: #666;
+  position: relative;
+  background: #F5F5F5;
+  border-left: 1px solid #ccc;
+  margin: 0;
+  padding: 5px 20px;
+  /*quotes: "\201C" "\201D" "\2018" "\2019";*/
+  quotes: "\201C" "\201D";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 250%;
+  position: absolute;
+  top: -13px;
+  left: 3px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+cite {
+  font-style: normal;
+  color: #666;
+  position: relative;
+  background: #F5F5F5;
+  /*border-left: 1px solid #ccc;*/
+  margin: 0;
+  padding: 0 3px 0 5px;
+  /*quotes: "\201C" "\201D" "\2018" "\2019";*/
+  quotes: "\201C" "\201D";
+}
+
+cite:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 200%;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+}
+
+/*cite:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 200%;
+  position: absolute;
+  top: -2px;
+  right: -5px;
+}*/
+
+.publish-date {
+  font-size: 70%;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  color: #9f9f9f;
+  border-top: 1px dotted #9f9f9f;
+}
+
+.warning {
+  color: #B05800;
+  margin: 10px 0;
+  padding: 3px 20px 0 15px;
+  border-top: solid #FFD47D 1px;
+  border-bottom: solid #FFD47D 1px;
+  background-color: #FFF8B1;
+}
+
+.warning h2 {
+  font-size: 130%;
+  margin: 10px 0;
+  border: none;
+}
+
+.warning h2:before {
+  content: '⚠️ ';
+}
+
+.warning p {
+  margin: 15px 0 15px 25px;
+}
+
+.warning a:link, .warning a:visited {
+  color: #9E4F00;
+  font-weight: bold;
+}
+
+footer {
+  height: 50px;
 }
 
 .related {
-  margin: 10px 0 10px 0;
-  padding: 5px;
   text-align: right;
-  background: #f0f0f0;
+  background: #F5F5F5;
+  margin: 20px 0;
+  padding: 5px 5px 5px 5px;
+  border: dotted #d0d0d0 1px;
+  border-left: none;
+  border-right: none;
   font-size: 90%;
-  font-weight: normal;
-  border: solid #e0e0e0 1px;
+  position: relative;
 }
 
-article .related {
-  padding: 5px;
-  text-align: right;
-  margin: 50px 0 10px 0;
-}
-
-.igstan-twitter-button {
+.twitter-button {
   position: absolute;
+  left: 4px;
+  bottom: 0;
   top: auto;
-  left: 5px;
-  bottom: 0;
 }
 
-.talks {
-  display: block;
+.twitter-button iframe {
+  display: inline-block;
 }
 
-article time[pubdate] {
-  display: block;
-  padding: 0 0 10px 0;
-  color: #808080;
-  font-size: 70%;
+.feed, .posts a.feed:link {
+  padding-right: 20px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJFSURBVBgZBcHda5V1AADg5/d733Oc7tjOaNs5GC6KdrEwmpPRxG7spoKghOim7oK8y0MIEQRL+geGEIQ3UXQvSJ8IafZxUbjQhRDZoU60iYsSc9t5v87b84TsVe3mrBWpHoCICIAIACixYTUfOJM2Z62YO97TOULSIKaEQAyESAzEgISAgLpi48de87MLUqmezhGyhO4SCW7f4O81YiSJiCQIkbqmNcXMIjMXeilIGsQxDp8AnKDY5teL3PyU6h4CdY3Av7cYu58R0QghZWeT9fP0v2V7i8Y4j77As2c5sAwIFAXDgjInJxURAzub/PwxMZBGphZYeIWJWZ44xdo5bl4kK8kzioohUUREd4kXP+Kpd3nkee72+epNBleAxdfoLJBlDEuKkpxoBAkBjXGm53n8ZZ45S/shrr7P75eBo6eo9zAsKCqGRBEB/1zj89e5eo7tLRr7ePJtWg9wZZV7t2i2OPQcw5JiRE4UESN1ZPc2g0tceos/LtPYx9HTaPDNe8Dhl9gtyStyUiMIJDXLp2m0GHzN2gdMzdPq0F3k+pcc/4+x/UwepKzIiSDWTB/iwBLT8xw8xt07rJ8HHj7GbkX/B+DBxyhrciIQ2N2i2AG2fiPL+OsXoNVlWPDnDaC5l6qiJJWjLlHxxRs0JhhcIyvp/8SHJylKdiu++4Tr31NW7B8nkrwzp627d9nkHM0Wsea+GSY6tDvESEyY6TIxyZ4GSUp/nTubqyF7WrvZtaKrZ4QSQ+TIMUSJHCVypGhaHW448z+h1tLAgvKk7gAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
-article p {
-  text-align: justify;
-}
-
-.copyright {
-  color: #808080;
-  position: fixed;
-  display: block;
-  bottom: 0;
-  left: 0;
-  padding: 0 0 0 45px;
+.posts h2, .online h2, .talks h2 {
   margin: 0;
-  background: #eee;
-  width: 825px;
-  height: 25px;
-  line-height: 25px;
-  box-shadow: 2px -2px 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 2px -2px 7px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 2px -2px 7px rgba(0, 0, 0, 0.5);
-  border-top-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-right-radius: 3px;
+  padding: 10px 0 5px 5px;
 }
 
-.copyright small {
-  font-size: 70%;
+.posts ol {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none outside;
 }
 
-#disqus_thread {
-  margin-top: 100px;
+.posts .related {
+  margin: 10px 0;
+}
+
+.posts li, .online li, .talks li {
+  padding: 5px 0;
+}
+
+.post li p {
+  display: inline;
+}
+
+.post li {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.posts time {
+  color: #a0a0a0;
+  display: inline-block;
+  width: 110px;
+  padding: 0 4px 0 0;
+  text-align: right;
+}
+
+.posts time:after {
+  content: '·';
+  margin-left: 7px;
+}
+
+.posts a, .online a, .talks a {
+  text-decoration: none;
+}
+
+.posts a:hover, .online a:hover, .talks a:hover {
+  text-decoration: underline;
+}
+
+.talks ol {
+  margin: 0 0 0 15px;
+  padding: 0;
+  list-style: none;
+}
+
+
+/*.posts a:link, .posts a:visited {
+  color: #2060a0;
+  padding: 0 2px;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.posts a:hover {
+  color: white;
+  background-color: #2060a0;
+}
+*/
+
+/* —————————————————————————————————————————————————————————————————————————— */
+/* NAV                                                                        */
+/* —————————————————————————————————————————————————————————————————————————— */
+header {
+  position: relative;
+  width: 670px;
+  margin: 0 auto;
+  border-bottom: 1px dotted #9f9f9f;
+}
+
+.logo {
+  position: absolute;
+  bottom: -48px;
+  left: -110px;
+  padding: 50px 20px 20px 20px;
+}
+
+nav {
+  text-align: right;
+  padding: 50px 0 10px 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-left: 10px;
+}
+
+/*nav li:after {
+  color: #bfbfbf;
+  content: '; ';
+}
+
+nav li:hover:after {
+  color: #333;
+}*/
+
+/*nav li:last-child:after {
+  content: '';
+}*/
+
+nav ul a:link, nav ul a:visited {
+  font-family: 'droid sans mono', monospace;
+  color: #9f9f9f;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 2px;
+  /*text-transform: uppercase;*/
+}
+
+nav ul a:hover {
+  color: #cc0033;
+  color: #1C83B3;
+  color: #2060A0;
+  color: #333;
+  text-decoration: underline;
+}
+
+/* —————————————————————————————————————————————————————————————————————————— */
+/* SYNTAX                                                                     */
+/* —————————————————————————————————————————————————————————————————————————— */
+/*.highlight        { background: #ffffff; }*/
+.highlight .c     { color: #999988; } /* Comment */
+/*.highlight .err { color: #a61717; background-color: #e3d2d2 }*/ /* Error */
+.highlight .k     { font-weight: bold } /* Keyword */
+.highlight .o     { } /* Operator */
+.highlight .cm    { color: #999988; } /* Comment.Multiline */
+.highlight .cp    { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1    { color: #999988; } /* Comment.Single */
+.highlight .cs    { color: #999999; font-weight: bold; } /* Comment.Special */
+.highlight .gd    { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge    { } /* Generic.Emph */
+.highlight .gr    { color: #aa0000 } /* Generic.Error */
+.highlight .gh    { color: #999999 } /* Generic.Heading */
+.highlight .gi    { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go    { color: #888888 } /* Generic.Output */
+.highlight .gp    { color: #555555 } /* Generic.Prompt */
+.highlight .gs    { font-weight: bold } /* Generic.Strong */
+.highlight .gu    { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt    { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc    { font-weight: bold } /* Keyword.Constant */
+.highlight .kd    { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp    { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr    { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt    { color: #445588 } /* Keyword.Type */
+.highlight .m     { color: #009999 } /* Literal.Number */
+.highlight .s     { color: #d14 } /* Literal.String */
+.highlight .na    { color: #008080 } /* Name.Attribute */
+.highlight .nb    { color: #0086B3 } /* Name.Builtin */
+.highlight .nc    { color: #445588 } /* Name.Class */
+.highlight .no    { color: #008080 } /* Name.Constant */
+.highlight .ni    { color: #800080 } /* Name.Entity */
+.highlight .ne    { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf    { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn    { color: #555555 } /* Name.Namespace */
+.highlight .nt    { color: #000080 } /* Name.Tag */
+.highlight .nv    { color: #008080 } /* Name.Variable */
+.highlight .ow    { font-weight: bold } /* Operator.Word */
+.highlight .w     { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf    { color: #009999 } /* Literal.Number.Float */
+.highlight .mh    { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi    { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo    { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb    { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc    { color: #d14 } /* Literal.String.Char */
+.highlight .sd    { color: #d14 } /* Literal.String.Doc */
+.highlight .s2    { color: #d14 } /* Literal.String.Double */
+.highlight .se    { color: #d14 } /* Literal.String.Escape */
+.highlight .sh    { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si    { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx    { color: #d14 } /* Literal.String.Other */
+.highlight .sr    { color: #009926 } /* Literal.String.Regex */
+.highlight .s1    { color: #d14 } /* Literal.String.Single */
+.highlight .ss    { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp    { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc    { color: #008080 } /* Name.Variable.Class */
+.highlight .vg    { color: #008080 } /* Name.Variable.Global */
+.highlight .vi    { color: #008080 } /* Name.Variable.Instance */
+.highlight .il    { color: #009999 } /* Literal.Number.Integer.Long */
+
+
+/*
+  A bug in the pygments parser causes the first `case` keyword to be recognized
+  as a class name and gets different colouring. This rule works around this bug.
+
+  sealed trait List[A]
+  case class Nil[A]() extends List[A]
+*/
+.highlight .nc:first-child {
+  color: #000;
+  font-weight: bold;
 }

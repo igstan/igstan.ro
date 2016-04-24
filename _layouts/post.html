@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1>{{ page.title }}</h1>
+
+  <p class="publish-date">
+    <time title="{{ page.date }}" pubdate="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  </p>
+
+  {{ content }}
+
+  <div class="related">
+    <span class="twitter-button">
+      <a style="position:fixed" href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="igstan">Tweet</a>
+    </span>
+    List <a href="/posts.html">all posts</a>, go to <a href="/">homepage</a> or subscribe to the <a href="/feed.xml" class="feed">RSS feed</a>
+  </div>
+
+  <!-- <div class="PageNavigation">
+    {% if page.previous.url %}
+      <a class="prev" href="{{page.previous.url}}" title="{{page.previous.title}}">prev</a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next" href="{{page.next.url}}" title="{{page.next.title}}">next</a>
+    {% endif %}
+  </div> -->
+
+  <div id="disqus_thread"></div>
+
+  <script type="text/javascript">
+  (function() {
+      var node = document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0];
+
+      // load disqus comments
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = 'http://igstan.disqus.com/embed.js';
+      node.appendChild(dsq);
+
+      // load twitter button
+      var twit = document.createElement('script');
+      twit.type = 'text/javascript';
+      twit.async = true;
+      twit.src = 'http://platform.twitter.com/widgets.js';
+      node.appendChild(twit);
+  })();
+  </script>
+</div>

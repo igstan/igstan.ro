@@ -1,9 +1,2 @@
-*.o
-*.hi
-*.tmproj
-*.tix
-.hpc
+.jekyll-metadata
 _site
-_cache
-dist
-hakyll
