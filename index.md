@@ -19,7 +19,6 @@ layout: default
   <h2>Elsewhere</h2>
   <ul>
     <li><a href="https://github.com/igstan">GitHub</a></li>
-    <li><a href="https://twitter.com/igstan">Twitter</a></li>
     <li><a href="https://stackoverflow.com/users/58808/ionut-g-stan">StackOverflow</a></li>
   </ul>
 </section>
