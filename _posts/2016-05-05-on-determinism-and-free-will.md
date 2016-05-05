@@ -14,11 +14,11 @@ Now, if the universe is all there is to it and we're also part of the universe, 
 
 It seems that the *feeling* of free will is one of those traits that natural selection has favored, but which bear no actual relation to the reality. We think we have free will because otherwise we'd get depressed and we'd commit suicide, I presume.
 
-However, it gets meta. I believe these thoughts I've put down here were meant to exist from the very beginning of time. There's no contribution of any entity to anything. The particles I'm made of have are now in a state that can influence other particles into some other states and them, in turn, influce others, i.e., any reader of this. A continuous movement of star dust in the universe, but certain clumps form our selves. Or rather, form machines complex enough to build a certain, most likely imprecise model of themselves, a model that sees the machine as having a special sauce — consciousness.
+However, it gets meta. I believe these thoughts I've put down here were meant to exist from the very beginning of time. There's no contribution of any entity to anything. The particles I'm made of have are now in a state that can influence other particles into some other states and them, in turn, influence others, i.e., any reader of this. A continuous movement of star dust in the universe, but certain clumps form our selves. Or rather, form machines complex enough to build a certain, most likely imprecise model of themselves, a model that sees the machine as having a special sauce — consciousness.
 
 As with anything in this universe, my thoughts are bound to evolve over time. I might read about some discovery or opinion that will change how I see things right now. But will these thoughts change me at this moment? Technically, they won't cause anything to happen that wasn't meant to happen. Whether I'll decide to ignore them completely or get depressed, it was meant to be that way.
 
-These aren't new thoughts, of course. There have been many more before me that have thought of this problem, but it's still an open one. It's called the free will problem and appears because there seems to be an incompatibility between determinisn and free will. One quote that resonates with me, [attributed by Wikipedia to Arthur Schopenhaur][1] reads:
+These aren't new thoughts, of course. There have been many more before me that have thought of this problem, but it's still an open one. It's called the free will problem and appears because there seems to be an incompatibility between determinism and free will. One quote that resonates with me, [attributed by Wikipedia to Arthur Schopenhaur][1] reads:
 
 > Man can do what he wills but he cannot will what he wills.
 
@@ -30,7 +30,7 @@ The reason I've recounted this is because I've recently come across a [video][0]
 
 ## I, Robot
 
-You know, some movies related to artificial intelligence, the strong one, raise questions on how might a robot might feel if it finds out that it's just a robot, that it's not the _real thing_. I'd like to see a movie where human beings realize that they're less than they think they are — just machines. Maybe someone has made such a film arealdy?
+You know, some movies related to artificial intelligence, the strong one, raise questions on how might a robot might feel if it finds out that it's just a robot, that it's not the _real thing_. I'd like to see a movie where human beings realize that they're less than they think they are — just machines. Maybe someone has made such a film already?
 
 I normally have a resources section at the end of my blog posts, with links to resources I've used while doing my research. I won't do this now because the research is still in progress and I'm pretty sure you can find them yourself just as easily.
 
