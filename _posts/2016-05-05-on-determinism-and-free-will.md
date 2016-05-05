@@ -30,7 +30,7 @@ The reason I've recounted this is because I've recently come across a [video][0]
 
 ## I, Robot
 
-You know, some movies related to artificial intelligence, the strong one, raise questions on how might a robot might feel if it finds out that it's just a robot, that it's not the _real thing_. I'd like to see a movie where human beings realize that they're less than they think they are — just machines. Maybe someone has made such a film already?
+You know, some movies related to artificial intelligence, the strong one, raise questions on how a robot might feel if it finds out that it's just a robot, that it's not the _real thing_. I'd like to see a movie where human beings realize that they're less than they think they are — just machines. Maybe someone has made such a film already?
 
 I normally have a resources section at the end of my blog posts, with links to resources I've used while doing my research. I won't do this now because the research is still in progress and I'm pretty sure you can find them yourself just as easily.
 
