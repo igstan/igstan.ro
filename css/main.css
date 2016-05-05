@@ -337,8 +337,16 @@ footer {
   text-decoration: underline;
 }
 
+.talks {
+  margin-bottom: 50px;
+}
+
+.talks .related {
+  margin-top: 5px;
+}
+
 .talks ol {
-  margin: 0 0 0 15px;
+  margin: 0 5px;
   padding: 0;
   list-style: none;
 }
