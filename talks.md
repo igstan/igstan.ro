@@ -7,6 +7,13 @@ layout: default
   <ol>
     <li>
       <p>
+        <a href="http://www.bjug.ro/editii/14.html">I T.A.K.E. Unconference 2015</a>,
+        <a href="http://static.igstan.ro/lets-write-a-type-checker.pdf">Let's Write a Type Checker</a>
+      </p>
+      <script async class="speakerdeck-embed" data-id="c6e99e6a45214679a4e651000720e497" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+    </li>
+    <li>
+      <p>
         <a href="http://www.bjug.ro/editii/14.html">Bucharest Java User Group #14</a>,
         <a href="http://static.igstan.ro/scala-bjug-14.pdf">Scala — An Introduction</a>
       </p>
