@@ -10,7 +10,7 @@ For the past two or three weeks I've been somehow obsessed with the idea that th
 
 My current belief is that the universe is a deterministic entity, that the present is entirely determined by its past, that the past is determined by its past and so on, until the beginning of time. I'm also reticent of believing that there's anything else "outside" the universe, for example a God, heaven, angels and so on, although I kind of wish it were true.
 
-Now, if the universe is all there is to it and we're also part of the universe, our minds included, then it must be that all that we feel we are is a deterministic result of the initial conditions of the universe. Every thought we had, have or will have can virtually be traced back to the beginning of the universe. Every decision we make, every action we do is a result of a previous configuration of the universe we're occupying. Where's free will then? Whose free will even?
+Now, if the universe is all there is to it and we're also part of the universe, our minds included, then it must be that all that we feel we are is a deterministic result of the initial conditions of the universe. Every thought we had, have or will have can virtually be traced back to the beginning of the universe. Every decision we make, every action we take is a result of a previous configuration of the universe we're occupying. Where's free will then? Whose free will even?
 
 It seems that the *feeling* of free will is one of those traits that natural selection has favored, but which bear no actual relation to the reality. We think we have free will because otherwise we'd get depressed and we'd commit suicide, I presume.
 
