@@ -7,6 +7,13 @@ layout: default
   <ol>
     <li>
       <p>
+        <a href="http://iasi.codecamp.ro/">Codecamp Iași 2016</a>,
+        <a href="http://static.igstan.ro/a-type-inferencer-for-ml-in-200-lines-of-scala.pdf">A Type Inferencer for ML in 200 Lines of Scala</a>
+      </p>
+      <script async class="speakerdeck-embed" data-id="f2df5b0458374a7b8d129e71b955fae4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+    </li>
+    <li>
+      <p>
         <a href="http://itakeunconf.com/sessions/lets-write-a-parser">I T.A.K.E. Unconference 2016</a>,
         <a href="http://static.igstan.ro/lets-write-a-parser.pdf">Let's Write a Parser</a>
       </p>
