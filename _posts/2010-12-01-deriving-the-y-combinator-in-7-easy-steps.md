@@ -212,4 +212,4 @@ I hope you enjoyed it!
 
 [1]: http://en.wikipedia.org/wiki/Fixed_point_combinator
 [2]: http://cnblogs.com/windydays/archive/2012/04/09/2439519.html
-[3]: http://citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps
+[3]: http://legacyblog.citizen428.net/blog/2010/12/14/clojure-deriving-the-y-combinator-in-7-stolen-steps/
