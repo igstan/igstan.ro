@@ -9,7 +9,7 @@ I recently discovered, while preparing the slides for my [Modularity à la ML][0
 
 ## Functor-Based Data Structures
 
-First of all, let's see how sets are represented in the SML/NJ library, which is what I've used initially. The SML/NJ library provides a collection of common data structures and algorithms that aren't part of the standard Basis library mandated by Standard ML. For set data structures, it exposes an `ORD_SET` signature that's meant for sets implemented using a predefined ordering on the contained elements (there is support for hash sets, too). Two functors produce structures that satisfy the `ORD_SET` signature: `BinarySetFn` and `SplaySetFn`. Here's a sample of using `BinarySetFn` with integer elements:
+First of all, let's see how sets are represented in the [SML/NJ library][1], which is what I've used initially. The SML/NJ library provides a collection of common data structures and algorithms that aren't part of the standard Basis library mandated by Standard ML. For set data structures, it exposes an [`ORD_SET`][2] signature that's meant for sets implemented using a predefined ordering on the contained elements (there is support for hash sets, too). Two functors produce structures that satisfy the `ORD_SET` signature: [`BinarySetFn`][3] and `SplaySetFn`. Here's a sample of using `BinarySetFn` with integer elements:
 
 ```sml
 structure Main =
@@ -424,6 +424,10 @@ Success! Another illegal state made unrepresentable! Also, notice how the error 
   operand:         (a,RevIntOrd.t) ListSet.set
 ```
 
-That's all, folks!
+That's all, folks! You can find the final version of the code in this [gist][4].
 
 [0]: {{page.previous.url}}
+[1]: http://www.smlnj.org/doc/smlnj-lib/
+[2]: http://www.smlnj.org/doc/smlnj-lib/Manual/ord-set.html
+[3]: http://www.smlnj.org/doc/smlnj-lib/Manual/binary-set-fn.html
+[4]: https://gist.github.com/igstan/d2585427d4911cda667d42615fce6eda
