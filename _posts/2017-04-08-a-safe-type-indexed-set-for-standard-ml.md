@@ -390,10 +390,10 @@ structure RevIntOrd :> TAGGED_ORD where type a = int =
     type a = int
 
     fun reverseOrd ord (a, b) =
-     case ord (a, b) of
-       LESS => GREATER
-     | EQUAL => EQUAL
-     | GREATER => LESS
+      case ord (a, b) of
+        LESS => GREATER
+      | EQUAL => EQUAL
+      | GREATER => LESS
 
     val wrap = Fn.id
     val compare = reverseOrd Int.compare
