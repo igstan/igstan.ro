@@ -7,6 +7,13 @@ layout: default
   <ol>
     <li>
       <p>
+        <a href="http://scalar-conf.com/">Scalar 2017</a>,
+        <a href="http://static.igstan.ro/modularity-a-la-ml.pdf">Modularity à la ML</a>
+      </p>
+      <script async class="speakerdeck-embed" data-id="467810402fbf4347a7d9c118963fa623" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+    </li>
+    <li>
+      <p>
         <a href="http://iasi.codecamp.ro/">Codecamp Iași 2016</a>,
         <a href="http://static.igstan.ro/a-type-inferencer-for-ml-in-200-lines-of-scala.pdf">A Type Inferencer for ML in 200 Lines of Scala</a>
       </p>
