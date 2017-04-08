@@ -1,5 +1,5 @@
 ---
-title: Dependencies and Modules In Scala
+title: Dependencies and Modules in Scala
 author: Ionuț G. Stan
 date: June 08, 2013
 ---
