@@ -1,6 +1,7 @@
 ---
 title: Modularity à la ML (slides)
 author: Ionuț G. Stan
+date: April 08, 2017
 ---
 
 A few words regarding modularity in Standard ML and Scala. These are the slides
