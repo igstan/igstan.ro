@@ -312,7 +312,7 @@ signature ORD_SET =
   end
 ```
 
-The `'ord_t` type parameter in `type ('a, 'ord_t) set` represents the unique type associated with a `wrap`/`compare` record. So the set type isn't indexed only on the type of the containing elements, but also on the type of the ordering function. This new type parameter will ensure the type safery we're after.
+The `'ord_t` type parameter in `type ('a, 'ord_t) set` represents the unique type associated with a `wrap`/`compare` record. So the set type isn't indexed only on the type of the containing elements, but also on the type of the ordering function. This new type parameter will ensure the type safety we're after.
 
 Here's how the `ListSet` structure needs to change now:
 
