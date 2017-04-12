@@ -1,9 +1,14 @@
 ---
 title: A Safe Type-Indexed Set for Standard ML
 author: Ionuț G. Stan
-date: April 08, 2017
 date: 2017-04-08 05:00:00 +02:00
 ---
+
+## Update
+
+The solution I present in this post turns out not to be safe. See the [subsequent post]({{page.next.url}}) for an explanation. What follows is the original article.
+
+<hr>
 
 I recently discovered, while preparing the slides for my [Modularity à la ML][0] talk, a solution to a problem I've come across a while ago while implementing a type-indexed set data structure in Standard ML.
 
