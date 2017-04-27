@@ -121,7 +121,8 @@ p code, li code {
   position: relative;
 }
 
-.highlight pre code > span:before {
+/* .highlight pre code > span:before { */
+.highlight pre code > span[id]:before {
   position: absolute;
   color: #b0b0b0;
   content: counter(linenumbers);
