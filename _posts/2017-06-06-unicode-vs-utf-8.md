@@ -140,5 +140,12 @@ To summarize all the things we've discussed so far, here's a quick list of conce
 As you've probably understood by now, UTF-8 is just a concrete realization of a
 more abstract concept called Unicode, so there's no point in comparing them.
 
+## Further Reading
+
+  - [Joel Spolsky's article][0]
+  - [Programming with Unicode](http://unicodebook.readthedocs.io/)
+  - [UTF-8 Everywhere](http://utf8everywhere.org/)
+  - [UTF-8 History](http://www.cl.cam.ac.uk/~mgk25/ucs/utf-8-history.txt)
+
 [0]: https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 [1]: http://www.klingonwiki.net/En/Unicode
