@@ -32,7 +32,7 @@ We can use 16 bits in a row to represent a number. That's a little better, we ca
 
 ### 16-bit Encoding
 
-Are we done yet? Not quite, because the software manufacturers will notice that their users will mostly use characters that are assigned numbers less than 256, which means they could fit on 8 bits. Having them represented on 32 bits means a lot of wasted resources. So we come up with a better encoding, that requires just 16 bits to represent a number.
+Are we done yet? Not quite, because the software manufacturers will notice that their users will mostly use characters that are assigned numbers less than 128, which means they could fit on 7 bits. Having them represented on 32 bits means a lot of wasted resources. So we come up with a better encoding, that requires just 16 bits to represent a number.
 
 As we've seen above, 16 bits allow us to represent numbers up to 65535. What shall we do for numbers greater than this one? We can apply a clever little trick. We can reserve a few 16-bit combinations which used alone don't encode any code point, but when seen in pairs are treated as 32-bit numbers. We decide to reserve 2048 such 16-bit combinations, where 1024 of them can only appear as the first component of the pair and the other 1024 can only appear as the second component. These are called <strong>surrogate pairs</strong>.
 
@@ -40,10 +40,9 @@ This trick means that we'll be able to represent `65536 - 2048 = 63488` characte
 
 ### 8-bit Encoding
 
-Finally, we figure out there's nevertheless a way to encode code points less than 256 using just 8 bits. So we come up with an even smarter encoding, one that uses an increasing number of 8-bit blocks, i.e., bytes, as we need to represent bigger numbers. This is also called a variable-length encoding because the number of bytes used to represent a character varies.
+Finally, we figure out there's an even better way to encode code points less than 128 using just 8 bits. So we come up with an encoding that uses an increasing number of 8-bit blocks, i.e., bytes, as we need to represent bigger numbers. This is also called a variable-length encoding because the number of bytes used to represent a character varies.
 
 The main idea behind this encoding is to add a mark at the beginning of the first byte that says how many bytes the sequence is composed of.
-
 
 ```
  Code Point Range | Applicable Bit Sequence
@@ -54,7 +53,7 @@ The main idea behind this encoding is to add a mark at the beginning of the firs
  65536 - 1114111  | 11110xxx  10xxxxxx  10xxxxxx  10xxxxxx
 ```
 
-So, if we want to represent a number between 0 and 127 we can just output a `0` bit followed by the 7 bits that encode the number. For numbers between 128 and 2047 we need two bytes. The first one starts with the `110` bit sequence, while the second with the `10` bit sequence. The `x` characters can be used to fill the bits of the number we want to represent. Similarly for the other two cases. We'll call this encoding <strong>UTF-8</strong>.
+So, if we want to represent a number between 0 and 127 we can just output a `0` bit followed by the 7 bits that encode the number. For numbers between 128 and 2047 we need two bytes. The first one starts with the `110` bit sequence, while the second with the `10` bit sequence. The `x` characters can be used to fill in the bits of the number we want to represent. Similarly for the other two cases. We'll call this encoding <strong>UTF-8</strong>.
 
 ## Quick Glossary
 
