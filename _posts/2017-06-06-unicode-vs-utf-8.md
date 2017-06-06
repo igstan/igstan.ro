@@ -69,7 +69,7 @@ character.
 Are we done yet? Not quite, because the software manufacturers will notice that
 their users will mostly use characters that are assigned numbers less than 128,
 which means they could fit on 7 bits. Having them represented on 32 bits means a
-lot of wasted resources. So we come up with a better encoding, that requires
+lot of wasted resources. So we come up with a better encoding, one that requires
 just 16 bits to represent a number.
 
 As we've seen above, 16 bits allow us to represent numbers up to 65535. What
