@@ -28,17 +28,17 @@ layout: default
   <ol>
     <li>
       <p>
+        <a href="http://scalar-conf.com/">Bucharest FP #34, October 2018</a>,
+        <a href="http://static.igstan.ro/an-applicative-application.pdf">An Applicative Application</a>
+      </p>
+      <script async class="speakerdeck-embed" data-id="947c19460d964aff9d046d9691a277c4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+    </li>
+    <li>
+      <p>
         <a href="http://iasi.codecamp.ro/">Scalar 2017</a>,
         <a href="http://static.igstan.ro/modularity-a-la-ml.pdf">Modularity à la ML</a>
       </p>
       <script async class="speakerdeck-embed" data-id="467810402fbf4347a7d9c118963fa623" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-    </li>
-    <li>
-      <p>
-        <a href="http://iasi.codecamp.ro/">Codecamp Iași 2016</a>,
-        <a href="http://static.igstan.ro/a-type-inferencer-for-ml-in-200-lines-of-scala.pdf">A Type Inferencer for ML in 200 Lines of Scala</a>
-      </p>
-      <script async class="speakerdeck-embed" data-id="f2df5b0458374a7b8d129e71b955fae4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
     </li>
   </ol>
   <div class="related">List <a href="{{ 'talks.html' | prepend: site.baseurl }}">all presentations</a></div>

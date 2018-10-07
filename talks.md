@@ -7,6 +7,13 @@ layout: default
   <ol>
     <li>
       <p>
+        <a href="http://scalar-conf.com/">Bucharest FP #34, October 2018</a>,
+        <a href="http://static.igstan.ro/an-applicative-application.pdf">An Applicative Application</a>
+      </p>
+      <script async class="speakerdeck-embed" data-id="947c19460d964aff9d046d9691a277c4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+    </li>
+    <li>
+      <p>
         <a href="http://scalar-conf.com/">Scalar 2017</a>,
         <a href="http://static.igstan.ro/modularity-a-la-ml.pdf">Modularity à la ML</a>
       </p>
