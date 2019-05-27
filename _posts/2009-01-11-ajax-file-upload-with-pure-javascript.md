@@ -102,7 +102,7 @@ understanding its interface let's review the contained file objects with a littl
 script. You may want to download [Firebug][2] in order to get a thorough
 understanding of the following exploration. Here's the code that we'll use:
 
-~~~html
+```html
 <!DOCTYPE html>
 
 <html>
@@ -128,13 +128,13 @@ var upload = function() {
 
 </body>
 </html>
-~~~
+```
 
 The `fileName` property gives us the name of the picked up file, but not the
 absolute path on the filesystem, just the basename. Modify the above source code
 above so that the JavaScript part now becomes:
 
-~~~js
+```js
 var upload = function() {
     var photo = document.getElementById("photo");
     // the file is the first element in the files property
@@ -145,7 +145,7 @@ var upload = function() {
 
     return false;
 };
-~~~
+```
 
 The `getAsBinary()` method will read the contents of the file and return them in
 binary representation. If you select a binary file, an image for example, you
@@ -158,7 +158,7 @@ encoded depending on the encoding parameter. This is by default UTF-8, but the
 encoding parameter it's not really optional. You still have to pass some value.
 An empty string will do it just fine:
 
-~~~js
+```js
 var upload = function() {
     var photo = document.getElementById("photo");
     // the file is the first element in the files property
@@ -173,7 +173,7 @@ var upload = function() {
 
     return false;
 };
-~~~
+```
 
 Finally, the `getAsDataURL()` method, a very interesting and very useful one,
 will return the file contents in a format ideally suited for, let's say, the src
@@ -181,7 +181,7 @@ attribute of an `IMG` tag. Of course, this will work as we're in Firefox right
 now, so let's add a `IMG` tag to the <abbr title="HyperText Markup Language">HTML</abbr>
 source and the appropriate JavaScript code to make this work:
 
-~~~html
+```html
 <!DOCTYPE html>
 
 <html>
@@ -219,7 +219,7 @@ var upload = function() {
 
 </body>
 </html>
-~~~
+```
 
 More information about the new <abbr title="Application Programming Interface">API</abbr>
 can be found on their dedicated pages on Mozilla Developer Center:
@@ -268,7 +268,7 @@ of the application, but we'll talk about this a little bit later. Let's just
 write a little JavaScript skeleton, that we'll use when assembling together all
 the pieces of the application:
 
-~~~js
+```js
 send: function () {
     var boundary = this.generateBoundary();
     var xhr = new XMLHttpRequest;
@@ -292,7 +292,7 @@ send: function () {
     // finally send the request as binary data
     xhr.sendAsBinary(data);
 }
-~~~
+```
 
 As you see, there's an undefined variable in the above snippet, data, which
 remains to be defined after we review the mechanism behind files upload over
@@ -314,12 +314,12 @@ our uploaded files would appear as elements inside the `$_FILES` array and addit
 values as elements inside the `$_POST` array. Under these circumstances we can
 write the PHP script to test that our JavaScript client is performing well:
 
-~~~php
+```php
 <?php
 
 print_r($_FILES);
 print_r($_POST);
-~~~
+```
 
 That's all we need on the server. Although simple this we'll give us valuable
 feedback about the sent data. The PHP script should list our uploaded files
@@ -348,7 +348,7 @@ On the other hand, when uploading files, we need to change the enconding to
 client is what we should do. Let's modify the earlier script so that it sends
 such a `multipart/form-data` header:
 
-~~~js
+```js
 var xhr = new XMLHttpRequest;
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
@@ -357,9 +357,9 @@ xhr.onreadystatechange = function() {
 };
 xhr.setRequestHeader("Content-Type", "multipart/form-data");
 xhr.sendAsBinary(data);
-~~~
+```
 
-<abbr title="Request for Comments">RFC</abbr> 1867, regarding form-based file
+[<abbr title="Request for Comments">RFC</abbr> 1867][5], regarding form-based file
 uploads, dictates that an extra parameter is required for the `Content-Type`
 header when its value is `multipart/form-data`. It is called boundary and its
 presence it's very logical. The multipart word inside the header means the sent
@@ -369,7 +369,7 @@ a string of characters that shouldn't be found inside any of the form values we
 send, otherwise the request will get garbled. Once again, let's modify the script
 to reflect this requirement.
 
-~~~js
+```js
 var xhr = new XMLHttpRequest;
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
@@ -386,7 +386,7 @@ var boundary = "AJAX--------------" + (new Date).getTime();
 var contentType = "multipart/form-data; boundary=" + boundary;
 xhr.setRequestHeader("Content-Type", contentType);
 xhr.sendAsBinary(data);
-~~~
+```
 
 Next, let's talk about the structure of the parts comprised in the request. Each
 of these is like a little request on its own. Each has its own headers structure
@@ -427,7 +427,7 @@ The text inside the file is "my random notes about web programming":
 Finally I'll give you a final example with both the <abbr title="HyperText Markup Language">HTML</abbr>
 markup of the form as well as a fictional request from that form:
 
-~~~html
+```html
 <form action="upload.php" method="post" enctype="multipart/form-data">
   <fieldset>
     <legend>Upload photo</legend>
@@ -442,7 +442,7 @@ markup of the form as well as a fictional request from that form:
     <input type="submit" value="Upload">
   </fieldset>
 </form>
-~~~
+```
 
 The issued request could be:
 
@@ -473,7 +473,7 @@ At this point we know all the parts to successfully build a pure JavaScript file
 uploader, which we're going to implement as an object. Here's the basic structure
 of the constructor and its prototype:
 
-~~~js
+```js
 /**
  * @param DOMNode form
  */
@@ -513,7 +513,7 @@ Uploader.prototype = {
      */
     send : function() {}
 };
-~~~
+```
 
 In case you didn't understand the `elements()` construct, this is called a getter
 and is supported by the latest versions of Firefox, Opera, Safari and Chrome.
@@ -523,7 +523,7 @@ Center][8].
 We should fill the above methods, so let's start with the `send()` method because
 we already wrote much of it in a previous sections of the tutorial:
 
-~~~js
+```js
 /**
  * @return null
  */
@@ -550,7 +550,7 @@ send : function() {
     // finally send the request as binary data
     xhr.sendAsBinary(data);
 }
-~~~
+```
 
 In addition to what we had earlier we have now introduced an iteration that allows
 us to send additional headers without modifying the prototype itself. We have also
@@ -560,7 +560,7 @@ returned by a call to a method whose only purpose is to build an
 <abbr title="HyperText Transfer Protocol">HTTP</abbr> compliant request for file
 uploads. Here's its source:
 
-~~~js
+```js
 /**
  * @param Array elements
  * @param String boundary
@@ -628,7 +628,7 @@ buildMessage : function(elements, boundary) {
 
     return request;
 }
-~~~
+```
 
 Although it looks complex, it has a fair amount of comments so that you won't
 have hard times understanding what it does. It simply iterates over an array of
@@ -639,7 +639,7 @@ finally joined using the boundary sent as an argument inside the `send()` method
 
 Here follows the source of the `elements()` getter, used in `send()`:
 
-~~~js
+```js
 /**
  * @return Array
  */
@@ -660,7 +660,7 @@ get elements() {
 
     return fields;
 }
-~~~
+```
 
 The snippet above grabs all the `INPUT` and `SELECT` elements inside the `FORM`
 element associated with the `Uploader` object. These elements are eventually
@@ -674,14 +674,14 @@ The final piece of code left for presentation is the `generateBoundary()` method
 which must return a string unique in the body of our request. For our simple
 example though, the method below should be just fine:
 
-~~~js
+```js
 /**
  * @return String
  */
 generateBoundary: function() {
     return "AJAX-----------------------" + (new Date).getTime();
 }
-~~~
+```
 
 The code inside is building a string based on the current timestamp to which some
 other characters are prepended. I'm using the uppercased word "AJAX" and some dashes,
@@ -692,10 +692,10 @@ for the boundary placeholders.
 Finally, the headers property of our object remains like it was in the skeleton.
 It is there so that you can append additional headers to the request, for example:
 
-~~~js
+```js
 var upl = new Uploader(form);
 upl.headers["X-Requested-With"] = "XMLHttpRequest";
-~~~
+```
 
 Save the source of the Uploader object in a file called "uploader.js", we'll use
 it in a few moments.
@@ -707,7 +707,7 @@ Let's now write the final <abbr title="HyperText Markup Language">HTML</abbr>
 source and save it inside a file called "index.html". Aside the markup, the code
 below introduces some event listeners for the "Upload" and "Preview" button:
 
-~~~html
+```html
 <!DOCTYPE html>
 
 <html>
@@ -763,17 +763,17 @@ window.addEventListener("load", function() {
 
 </body>
 </html>
-~~~
+```
 
 Now create another file, save it as upload.php, and write inside it the code we
 presented in the server-side section of the tutorial:
 
-~~~php
+```php
 <?php
 
 print_r($_FILES);
 print_r($_POST);
-~~~
+```
 
 That's all. You may now test the application, which will hopefully work from the
 first run. Don't forget to install Firebug to inspect what's happening behind the
