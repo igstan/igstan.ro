@@ -2,8 +2,6 @@ title: igstan.ro
 description: igstan.ro
 baseurl:
 url: "http://igstan.ro"
-highlighter: pygments
-markdown: redcarpet
 permalink: /posts/:year-:month-:day-:title.html
 
 defaults:
