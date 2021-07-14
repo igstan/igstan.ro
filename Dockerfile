@@ -9,4 +9,4 @@ RUN ["gem", "install", "pygments.rb", "-v", "2.2.0"]
 RUN ["gem", "install", "kramdown-parser-gfm", "-v", "1.1.0"]
 RUN ["gem", "install", "jekyll", "-v", "3.9"]
 
-CMD ["jekyll", "serve", "--host", "0.0.0.0", "--port", "4000"]
+CMD ["jekyll", "serve", "--drafts", "--host", "0.0.0.0", "--port", "4000"]
