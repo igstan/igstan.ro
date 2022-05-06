@@ -55,7 +55,7 @@ SELECT artist.name, country.name
 We could maybe start an SQLite session, create the tables, import the data and
 finally execute the query. This may even be a viable approach, but it doesn't
 fit the plan for this blog post. However, if you're on an Unix system, there's
-a hidden gem of a command, aptly called `join`, that can do precisely what the
+a hidden gem of a command, aptly named `join`, that can do precisely what the
 above SQL query can, only it doesn't need a database, just regular files. So,
 how could we use `join` to reproduce the above query?
 
@@ -212,8 +212,8 @@ tabulate() {
 full-join | show-nulls | sort-by 1 | ( headers; number-rows ) | tabulate
 ```
 
-<pre>
-  #  COUNTRY  ARTIST
+<!-- <div class="highlight">
+  <pre><code>  #  COUNTRY  ARTIST
 ===  =======  ======
   1  France   <a href="#">Clio</a>
   2  France   <a href="#">Jain</a>
@@ -230,5 +230,6 @@ full-join | show-nulls | sort-by 1 | ( headers; number-rows ) | tabulate
  13  UK       <a href="#">Jake Bugg</a>
  14  𝐍𝐔𝐋𝐋    <a href="#">Irina Rimes</a>
  15  𝐍𝐔𝐋𝐋    <a href="#">Jackson C. Frank</a>
- 16  𝐍𝐔𝐋𝐋    <a href="#">Lana Del Rey</a>
-</pre>
+ 16  𝐍𝐔𝐋𝐋    <a href="#">Lana Del Rey</a></code></pre>
+</div>
+ -->
