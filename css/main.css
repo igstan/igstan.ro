@@ -113,10 +113,6 @@ p code, li code {
   font-size: 80%;
 }
 
-.highlight pre code > span {
-  display: block;
-}
-
 .highlight pre code {
   counter-reset: linenumbers;
   position: relative;
