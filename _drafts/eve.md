@@ -15,7 +15,7 @@ factorial n = n * factorial (n - 1)
 
 What is implicit in the above piece of code is the presence of a stack. A hidden
 stack data structure is used by the runtime to manage intermediate results for
-us. We don't have this facility in Even, so what can we do?
+us. We don't have this facility in Eve, so what can we do?
 
 All that Eve offers us are databases, so we'll make use of that. We'll create a
 special @`factorial` database within which our `factorial` function can store
