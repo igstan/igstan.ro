@@ -25,7 +25,7 @@ same way mathematics presents conjectures which _may_ at some point be proved
 true or false. And just like natural sciences need field scientists and
 experimentalists that get their hands dirty and devise and conduct experiments,
 the same way mathematicians will conduct experiments in the form of incomplete
-of failed proofs, until one of them will actually prove or disprove the
+or failed proofs, until one of them will actually prove or disprove the
 mathematical proposition they set out to study. One salient point here is that
 there's no guarantee that the mathematician may actually find such a proof,
 it's a process of searching that may yield some answer or not — we have
